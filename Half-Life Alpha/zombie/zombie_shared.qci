@@ -1,0 +1,126 @@
+
+$surfaceprop "alienflesh"
+
+$eyeposition 0 0 55
+//$eyeposition 0 12 55
+
+// hitboxes
+$hbox 6 "Bip01 L Leg" 0.00 -7.37 -3.07  18.33 3.79 3.92
+$hbox 6 "Bip01 L Leg1" 0.00 -5.41 -3.29  18.33 1.66 2.83
+$hbox 6 "Bip01 L Foot" -1.24 -2.87 -2.87  2.17 8.13 1.15
+
+$hbox 7 "Bip01 R Leg" 0.00 -7.61 -4.48  18.33 3.83 2.85
+$hbox 7 "Bip01 R Leg1" 0.00 -5.71 -3.29  18.33 1.67 2.74
+$hbox 7 "Bip01 R Foot" -1.25 -2.87 -2.07  2.16 8.16 1.75
+
+$hbox 3 "Bip01 Pelvis" -8.58 -4.74 -7.00  1.56 5.33 6.82
+$hbox 3 "Bip01 Spine" -0.42 -3.39 -6.36  4.96 7.36 6.42
+$hbox 3 "Bip01 Spine1" 0.00 -3.41 -8.13  4.77 4.99 8.37
+$hbox 2 "Bip01 Spine2" 0.00 -1.15 -9.32  6.38 7.04 6.3
+$hbox 2 "Bip01 Spine3" -1.83 -7.11 -9.67  11.87 7.40 8.88
+
+$hbox 1 "Bip01 Head" -3.24 -6.89 -5.10  8.77 8.96 7.94
+
+$hbox 4 "Bip01 L Arm" 0.00 -4.15 -0.95  5.77 4.01 2.81
+$hbox 4 "Bip01 L Arm1" -3.04 -3.42 -2.51  18.57 2.91 2.96
+$hbox 4 "Bip01 L Arm2" 0.00 -2.90 -2.33  14.80 1.95 2.06
+$hbox 4 "Bip01 L Hand" -0.59 -1.47 -1.68  5.32 0.57 2.81
+
+$hbox 5 "Bip01 R Arm" 0.00 -4.64 -5.64  5.86 1.56 0.00
+$hbox 5 "Bip01 R Arm1" -3.88 -4.38 -3.37  18.78 2.62 2.20
+$hbox 5 "Bip01 R Arm2" 0.00 -1.40 -1.61  15.65 1.53 2.76
+$hbox 5 "Bip01 R Hand" -0.59 -1.47 -1.68  5.32 0.57 2.81
+
+/*
+==============================================================================
+COMMON ANIMATIONS
+==============================================================================
+*/
+$sequence idle1 "zombie_idle" fps 15 LOOP scale 1.14 ACT_IDLE 4
+$sequence turnleft "zombie_turnleft" fps 20 scale 1.14 ACT_TURN_LEFT 1
+$sequence turnright "zombie_turnright" fps 20 scale 1.14 ACT_TURN_RIGHT 1
+$sequence flinchsmall "zombie_smallflinch" fps 22 scale 1.14 ACT_SMALL_FLINCH 5
+$sequence flinch "zombie_flinch" fps 22 scale 1.14 ACT_SMALL_FLINCH 1
+$sequence bigflinch "zombie_bigflinch" fps 20 scale 1.14 ACT_BIG_FLINCH 1
+$sequence getup "zombie_getup" fps 15 scale 1.14
+$sequence falling "zombie_falling" loop fps 26 scale 1.14 ACT_FALL 1
+$sequence attack1 "zombie_attack" fps 15 scale 1.14 ACT_MELEE_ATTACK1 5 { event 1 10 } { event 2 19 }
+$sequence attack2 "zombie_attack2" fps 15 scale 1.0 ACT_MELEE_ATTACK1 1 { event 3 6 }
+$sequence walk "zombie_walk1" lx loop fps 22 scale 1.0 ACT_WALK 1 {
+	{ event 1004 22 "NPC.StepLeftWalk" }
+	{ event 1004 32 "NPC.StepRightWalk" }
+	{ event 1004 42 "NPC.StepLeftRun" }
+	{ event 1004 51 "NPC.StepRightRun" }
+	{ event 1004 1 "NPC.StepLeftWalk" }
+	{ event 1004 11 "NPC.StepRightWalk" }
+}
+
+$sequence laflinch "ZOMBIEX_SFCH_larm1" fps 15 scale 1.0 ACT_FLINCH_LEFTARM 1
+$sequence raflinch "ZOMBIEX_SFCH_rarm1" fps 15 scale 1.0 ACT_FLINCH_RIGHTARM 1
+$sequence llflinch "ZOMBIEX_SFCH_lleg1" fps 15 scale 1.0 ACT_FLINCH_LEFTLEG 1
+$sequence rlflinch "ZOMBIEX_SFCH_rleg1" fps 15 scale 1.0 ACT_FLINCH_RIGHTLEG 1
+/*
+==============================================================================
+DEATH ANIMATIONS
+==============================================================================
+*/
+$sequence dieheadshot "ZOMBIEX_Die(Headshot)1" x fps 20 scale 1.0 ACT_DIE_HEADSHOT 1 { event 2001 19 }
+$sequence dieheadshot2 "zombie_death" fps 22 scale 1.0 ACT_DIE_GUTSHOT 1 { event 2001 18 }
+$sequence diesimple "ZOMBIEX_Die(Simple)1" x fps 20 scale 1.0 ACT_DIESIMPLE 1 { event 2001 13 }
+$sequence diebackward "ZOMBIEX_Die(Backward)1" fps 18 scale 1.0 ACT_DIEBACKWARD 1 { event 2001 10 }
+$sequence dieforward "ZOMBIEX_Die(Forward)1" x fps 18 scale 1.0 ACT_DIEFORWARD 1 { event 2001 21 }
+/*
+==============================================================================
+SCRIPTED SEQUENCES
+==============================================================================
+*/
+$sequence pause "zombie_pause" fps 15 scale 1.0
+$sequence busting_through_wall "zombie_bust_through" fps 20 scale 1.14
+$sequence kick_punch_wall "kick_punch_wall" fps 14 scale 1.0
+$sequence bust_window "jump_through_window_c1a2" fps 26 scale 1.0
+$sequence soda "zombie_soda" fps 26 scale 1.0 {
+	{ event 1004 63 "NPC.ButtonLatchUnlocked1" }
+}
+$sequence slideidle "hitwall_slidedown(idle)" loop fps 16 scale 1.0
+$sequence slidewall "hitwall_slidedown" fps 18 scale 1.0 {
+	{ event 1000 1 }
+}
+$sequence ventclimbidle "zombie_pause" snap loop fps 15 scale 1.0 origin 0 0 80
+$sequence ventclimb "climb_out_vent" snap fps 20 scale 1.0 origin 0 0 80 {
+	walkframe 1 lx ly
+	walkframe 80 lx ly
+	walkframe 110 lx ly
+}
+$sequence deadidle "slumped_c1a1" loop fps 14 scale 1.0
+$sequence deadwall "slumped_c1a1(die)" fps 16 scale 1.0
+$sequence freakdie "zombie_freakout(die)" fps 12 scale 1.0 {
+	{ event 1000 4 }
+}
+$sequence freak "zombie_freakout" loop fps 16 scale 1.0 {
+// Now implemented by level designer { event 1003 6 "freak" }
+}
+$sequence eatbodytable "zombie_eatbody_table" loop fps 20 scale 1.0
+$sequence eatbody "zombie_eatbody" loop fps 15 scale 1.0
+$sequence eatbodystand "zombie_eatbody(stand)" fps 30 scale 1.0
+$sequence ripdoor "zombie_ripdoor" fps 20 scale 1.0 {
+	{ event 1008 1 "NPC.BustCrate1" }
+}
+$sequence zombie_pull_scientist "..\cinematics\zombie_pull_scientist_wall\zombie_pullsci" fps 17 scale 1.0
+$sequence zombie_eating "..\cinematics\barney_zombie_fight\barney_zombie_eating" loop fps 15 scale 1.14 {
+        origin 0 -12 0
+}
+$sequence eat_to_stand "..\cinematics\barney_zombie_fight\barney_zombie_stand" fps 15 scale 1.14 {
+        origin 0 -12 0
+}
+$sequence vent_zidle "..\cinematics\c1a3a_zombie_vent\scene_zombie_pull(idle)" fps 18 scale 1.0 origin 0 56 72
+$sequence vent_c1a3 "..\cinematics\c1a3a_zombie_vent\scene_zombie_pull" fps 18 scale 1.0 {
+	{ event 1000 1 }
+        origin 0 56 72
+}
+$sequence haulzombie "..\cinematics\zombie_haul_bodies\haul_zombie" fps 18 scale 1.0 {
+}
+$sequence c2a3_snack_getup "c2a3_snack_getup" fps 12 scale 1.0 {
+	rotate 90
+	origin 32 -147 0
+}
+

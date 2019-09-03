@@ -1,0 +1,66 @@
+-------------------------------------------------------------------------------
+GoldSrc MDL v6 Decompiler 0.4a BETA1 (Feb 26 2013 09:31:31)
+Copyright (c) 1999-2013 Tomas Slavotinek (aka baso88, GeckoN[CZ])
+E-mail: slavotinek@gmail.com
+-------------------------------------------------------------------------------
+MDL: scientist.mdl
+QC script: scientist/scientist.qc
+Reference: scientist/Scientist_Template_Pose(Headless_Body)1.smd
+Reference: scientist/Scientist_Template_Pose(Just_the_Head)1.smd
+Reference: scientist/Scientist_Einstien_Head_Template_Pose1.smd
+Reference: scientist/Scientist_Egon_Head_Template_Pose1.smd
+Sequence: scientist/idle1.smd
+Sequence: scientist/idle2.smd
+Sequence: scientist/idle3.smd
+Sequence: scientist/walk.smd
+Sequence: scientist/walktostand.smd
+Sequence: scientist/run.smd
+Sequence: scientist/stairsup.smd
+Sequence: scientist/flinch.smd
+Sequence: scientist/dieviolent.smd
+Sequence: scientist/dieforward.smd
+Sequence: scientist/diebackward.smd
+Texture: scientist/Torso-Bk.bmp
+Texture: scientist/Pnts-fnt.bmp
+Texture: scientist/Torso-Fnt.bmp
+Texture: scientist/Pants_Tip1.bmp
+Texture: scientist/Sleeve_Tp.bmp
+Texture: scientist/Hnd-Knc1.bmp
+Texture: scientist/Foot_L.bmp
+Texture: scientist/Foot_R.bmp
+Texture: scientist/Hnd-Bsd1.bmp
+Texture: scientist/Hnd-Top1.bmp
+Texture: scientist/Hnd-Plm1.bmp
+Texture: scientist/Hnd-Tsd1.bmp
+Texture: scientist/Foot_btm1.bmp
+Texture: scientist/Hd_Lft1.bmp
+Texture: scientist/NewFace1.bmp
+Texture: scientist/Hd_BNeck1.bmp
+Texture: scientist/Hd_Bck1.bmp
+Texture: scientist/Hair_Lft.bmp
+Texture: scientist/Hair_Bck.bmp
+Texture: scientist/Uvula1.bmp
+Texture: scientist/NewGlasses1.bmp
+Texture: scientist/Neck_Bck1.bmp
+Texture: scientist/Neck_Fnt1.bmp
+Texture: scientist/Roof-M1.bmp
+Texture: scientist/Tounge1.bmp
+Texture: scientist/NewTeeth1.bmp
+Texture: scientist/GlassTrim1.bmp
+Texture: scientist/QHd_Lft1.bmp
+Texture: scientist/QFace1.bmp
+Texture: scientist/QHd_Right1.bmp
+Texture: scientist/QHair_Back1.bmp
+Texture: scientist/QHair_Side1.bmp
+Texture: scientist/Stache1.bmp
+Texture: scientist/QBrow1.BMP
+Texture: scientist/Nostrils1.bmp
+Texture: scientist/XBack_Of_Neck1.bmp
+Texture: scientist/XHd_Lft2.bmp
+Texture: scientist/EFace1.bmp
+Texture: scientist/HairSide1.bmp
+Texture: scientist/XHair_Back1.bmp
+Texture: scientist/XHd_Rgt2.bmp
+Texture: scientist/XTeeth1.bmp
+Done.
+-------------------------------------------------------------------------------

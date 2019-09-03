@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	// original shader: basetimeslightma
+	"$basetexture" "halflife/tanktrak"
+	"$surfaceprop" "metal"
+}
