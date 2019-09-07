@@ -9,6 +9,8 @@ $BodyGroup "studio"
 
 $MaxEyeDeflection 90
 
+$mostlyopaque
+
 $EyePosition 0 0 20
 
 $SurfaceProp "alienflesh"
@@ -30,12 +32,14 @@ $Sequence "idle2" {
 	"idle2.smd"
 	activity "ACT_IDLE" 1
 	fps 20
+	loop
 }
 
 $Sequence "idle3" {
 	"idle3.smd"
 	activity "ACT_IDLE" 1
 	fps 20
+	loop
 }
 
 $Sequence "walk" {
