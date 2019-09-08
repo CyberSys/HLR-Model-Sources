@@ -9,6 +9,11 @@ $cdmaterials "models/hl_resurgence/hl1/"
 
 $scale 2.0
 
+$texturegroup eye
+{
+{ "SPHERE_Chrome1.bmp" } { "SPHERE_Chrome2.bmp" }
+}
+
 $surfaceprop "alienflesh"
 $jointsurfaceprop "Dummy02" "metal"
 $jointsurfaceprop "Dummy03" "metal"

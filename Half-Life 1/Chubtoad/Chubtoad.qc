@@ -16,7 +16,7 @@ $texturegroup eye
 }
 
 
-
+$sequence ragdoll "Chub_Template_Biped1" LOOP fps 16 ACT_DIESIMPLE 1
 $sequence idle "Chub_idle(subtle)1" LOOP fps 16 ACT_IDLE 10
 $sequence idle2 "Chub_fidget1(scratch)" fps 16 ACT_IDLE 1
 $sequence idle3 "Chub_fidget2(croak)" fps 16 ACT_IDLE 1
@@ -32,3 +32,36 @@ $sequence pdwiggle "Chub_play_dead(wiggle1)1" fps 40 ACT_DIEVIOLENT 1
 $sequence playdead1 "Chub_play_dead(flip_ovr)1" fps 16 ACT_STAND 1
 $sequence pdwiggle2 "Chub_play_dead(wiggle1)1" fps 16 ACT_TWITCH 1
 $sequence playdead2 "Chub_play_dead1" fps 16 ACT_FEAR_DISPLAY 1
+
+$collisionjoints "phy.smd"
+{
+	$mass 40.0
+	$inertia 1.00
+	$damping 0.00
+	$rotdamping 0.00
+	$rootbone "bip01 pelvis"
+
+	$jointconstrain "bip01 r arm2" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r arm2" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r arm2" z limit -64.00 48.00 0.00
+
+	$jointconstrain "bip01 l arm2" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l arm2" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l arm2" z limit -68.00 48.00 0.00
+
+	$jointconstrain "bip01 l hand" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l hand" y limit -12.00 12.00 0.00
+	$jointconstrain "bip01 l hand" z limit -12.00 12.00 0.00
+
+	$jointconstrain "bip01 r hand" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r hand" y limit -12.00 12.00 0.00
+	$jointconstrain "bip01 r hand" z limit -12.00 12.00 0.00
+
+	$jointconstrain "bip01 l leg1" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l leg1" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l leg1" z limit -15.00 113.00 0.00
+
+	$jointconstrain "bip01 r leg1" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r leg1" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r leg1" z limit -15.00 113.00 0.00
+}

@@ -1,5 +1,5 @@
 $modelname "vj_hlr/hl1/aflock.mdl"
-$CDMaterials "models\hl_resurgence\hl1\"
+$CDMaterials "models\hl_resurgence\hl1\aflock\"
 
 
 $bbox 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000

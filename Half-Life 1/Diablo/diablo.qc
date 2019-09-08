@@ -5,6 +5,12 @@ $CDMaterials "models\hl_resurgence\hl1\panthereye\"
 
 $SurfaceProp "alienflesh"
 
+// 2 skin families
+$texturegroup skinfamilies 
+{
+{ "armpit1" "butt1" "claw_back1" "claw_frnt1" "face2" "fnt_paw_out1" "foot_back_bttm1" "foot_fnt_bttm1" "leg_back_in1" "leg_back1" "mouth1" "side1" "tail" "tounge1" }
+{ "armpit1_blue" "butt1_blue" "claw_back1_blue" "claw_frnt1_blue" "face2_blue" "fnt_paw_out1_blue" "foot_back_bttm1_blue" "foot_fnt_bttm1_blue" "leg_back_in1_blue" "leg_back1_blue" "mouth1_blue" "side1_blue" "tail_blue" "tounge1_blue" }
+}
 
 // whole body
 $body studio "diablo_template_model1"

@@ -1,5 +1,5 @@
 $modelname "vj_hlr/hl1/boid.mdl"
-$CDMaterials "models\hl_resurgence\hl1\"
+$CDMaterials "models\hl_resurgence\hl1\boid\"
 
 $SurfaceProp "alienflesh"
 

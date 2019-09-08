@@ -1,16 +1,57 @@
-$modelname "vj_hlr/hl1/friendly.mdl"
-$CDMaterials "models\hl_resurgence\hl1\friendly\"
+// Created by Crowbar 0.58
+
+$modelname "half-life\mrfriendly.mdl"
+
+$bodygroup "studio"
+{
+	studio "mrfriendly_reference.smd"
+}
 
 
-$bbox 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-$cbox 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-$eyeposition 0.000000 0.000000 17.000000
 $surfaceprop "alienflesh"
 
-//reference mesh(es)
-$body "studio" "reference"
+$contents "solid"
+
+$illumposition 1.046 3.267 31.331
+
+$eyeposition 0 0 17
+
+$cdmaterials "models\half-life\mr_friendly\"
 
 $attachment "vomit" "MDLDEC_Bone23" 0 0 0 rotate 0 180 -180
+$attachment "possession_cam" "MDLDEC_Bone1" 24 -14 0 rotate 0 0 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -63.077 -68.882 -4.277 65.185 75.408 66.948
+
+$hboxset "default"
+$hbox 100 "MDLDEC_Bone1" -9.94 -9.46 -15.19 11.6 8.2 14.91 ""
+$hbox 106 "MDLDEC_Bone2" -0.61 -11.51 -7.67 18.139999 10.52 4.76 ""
+$hbox 106 "MDLDEC_Bone3" 0.66 -9.6 -7.72 17.959999 7.04 2.69 ""
+$hbox 106 "MDLDEC_Bone4" 1.29 -1.45 -2.86 12.2 3.01 1.3 ""
+$hbox 106 "MDLDEC_Bone5" -1.05 -2.54 -1.7 2.37 6.25 2.84 ""
+$hbox 107 "MDLDEC_Bone9" -2.72 -12.05 -7.25 28.889999 9.09 7.01 ""
+$hbox 107 "MDLDEC_Bone10" 3.02 -7.46 -1.44 15.2 5.14 6.46 ""
+$hbox 107 "MDLDEC_Bone11" 4.25 -3.78 -1.83 15.78 2.75 1.77 ""
+$hbox 107 "MDLDEC_Bone12" -0.64 -1.01 -3.3 2.56 5.29 2.6 ""
+$hbox 100 "MDLDEC_Bone16" 2.31 -9.27 -8.87 12.86 -0.01 6.88 ""
+$hbox 103 "MDLDEC_Bone17" 0.79 -11.96 -12.23 17.99 8.42 12.42 ""
+$hbox 103 "MDLDEC_Bone18" 0.24 -3.78 -11.49 8.32 12.45 10.99 ""
+$hbox 102 "MDLDEC_Bone19" 0.93 -14.53 -12.32 12.27 17.120001 10.39 ""
+$hbox 102 "MDLDEC_Bone20" -0.49 -15.59 -16.379999 22.940001 14 16.360001 ""
+$hbox 101 "MDLDEC_Bone22" -7.11 -1.52 -5.94 14.07 9.09 8.69 ""
+$hbox 101 "MDLDEC_Bone25" -1.84 -0.91 -0.27 -0.03 2.23 1.63 ""
+$hbox 104 "MDLDEC_Bone26" 2.07 -8.59 -2.96 14.14 9.47 3.81 ""
+$hbox 104 "MDLDEC_Bone27" 5.23 -2.26 -7.61 23.129999 8.79 6.52 ""
+$hbox 104 "MDLDEC_Bone28" 0.16 -4.5 -3.44 25.459999 3.09 3.56 ""
+$hbox 104 "MDLDEC_Bone30" -0.51 -1.23 -1.7 23.25 4.2 2.6 ""
+$hbox 105 "MDLDEC_Bone31" -1.4 -7.27 -5.36 13.83 10.78 0.3 ""
+$hbox 105 "MDLDEC_Bone32" 0.01 -4.61 -6.63 20.719999 9.24 7.12 ""
+$hbox 105 "MDLDEC_Bone33" 1.2 -5.16 -4.44 16.25 2.86 3.45 ""
+$hbox 105 "MDLDEC_Bone34" 0.99 -2.94 -2.76 23.5 1.8 2.05 ""
+$hbox 105 "MDLDEC_Bone35" 16.559999 -0.51 -2.54 22.25 3.73 0.79 ""
+$skipboneinbbox
 
 $definebone "Bip01 R Finger0" "" 0.887805 -0.295644 23.822939 0 -98.495632 0 0 0 0 0 0 0
 $definebone "MDLDEC_Bone1" "Bip01 R Finger0" -39.028542 -5.829803 27.320967 -69.510474 90.000078 180.000007 0 0 0 0 0 0
@@ -49,43 +90,129 @@ $definebone "MDLDEC_Bone33" "MDLDEC_Bone32" 18.723963 0.000002 -0.000002 0 -75.4
 $definebone "MDLDEC_Bone34" "MDLDEC_Bone33" 16.253065 0 0 -22.987871 -0.108177 90.460112 0 0 0 0 0 0
 $definebone "MDLDEC_Bone35" "MDLDEC_Bone34" 22.16991 0.000001 0.000001 -0.048022 41.978667 0.053406 0 0 0 0 0 0
 
-// 8 animation sequence(s)
-$sequence "idle1" "idle1" fps 30 loop ACT_IDLE 1
-$sequence "ragdoll" "reference" fps 30 loop ACT_DIERAGDOLL 1
-$sequence "walk" "walk" LX fps 35 loop ACT_WALK 1
-$sequence "yeet" "walk" LX fps 300 loop ACT_RUN_STIMULATED 1
-$sequence "smallflinch" "smallflinch" fps 30 ACT_SMALL_FLINCH 1
-$sequence "smallflinch2" "smallflinch2" fps 30 ACT_SMALL_FLINCH 1
-$sequence "attack" "attack" fps 30 ACT_MELEE_ATTACK1 1 { event 1100 37 "attack" }
-$sequence "doublewhip" "doublewhip" fps 30 ACT_MELEE_ATTACK1 1 { event 1100 10 "event_mattack left" } { event 1100 27 "event_mattack right" }
-$sequence "diesimple" "diesimple" fps 30 ACT_DIESIMPLE 1
-$sequence "vomit" {
-	"vomit"
-	activity "ACT_RANGE_ATTACK1" 1
-	{ event 1100 20 "vomit" }
-	{ event 1100 26 "vomitdmg" }
-	{ event 1100 28 "vomitdmg" }
-	{ event 1100 30 "vomitdmg" }
-	{ event 1100 32 "vomitdmg" }
-	{ event 1100 34 "vomitdmg" }
-	{ event 1100 36 "vomitdmg" }
-	{ event 1100 38 "vomitdmg" }
-	{ event 1100 40 "vomitdmg" }
-	{ event 1100 42 "vomitdmg" }
-	{ event 1100 44 "vomitdmg" }
-	{ event 1100 46 "vomitdmg" }
+
+$ikchain "lfoot" "MDLDEC_Bone5" knee 0.765 -0.644 0
+$ikchain "rfoot" "MDLDEC_Bone12" knee 0 0 0
+
+$sequence "idle1" {
+	"mrfriendly_anims\idle1.smd"
+	activity "ACT_IDLE" -1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	loop
+	ikrule "lfoot" footstep
+	ikrule "rfoot" footstep
+}
+
+$sequence "walk" {
+	"mrfriendly_anims\walk.smd"
+	activity "ACT_WALK" -1
+	fadein 0.2
+	fadeout 0.2
+	fps 35
+	loop
+	ikrule "lfoot" footstep
+	ikrule "rfoot" footstep
+	walkframe 80 LX
+}
+
+$sequence "smallflinch" {
+	"mrfriendly_anims\smallflinch.smd"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lfoot" footstep
+	ikrule "rfoot" footstep
+}
+
+$sequence "smallflinch2" {
+	"mrfriendly_anims\smallflinch2.smd"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lfoot" footstep
+	ikrule "rfoot" footstep
+}
+
+$sequence "attack" {
+	"mrfriendly_anims\attack.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	{ event 1100 0 "event_play AttackMelee" }
+	{ event 1100 37 "event_mattack rightpower" }
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lfoot" footstep
+	ikrule "rfoot" footstep
+}
+
+$sequence "doublewhip" {
+	"mrfriendly_anims\doublewhip.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	{ event 1100 0 "event_play AttackMelee" }
+	{ event 1100 10 "event_mattack left" }
+	{ event 1100 27 "event_mattack right" }
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lfoot" footstep
+	ikrule "rfoot" footstep
+}
+
+$sequence "diesimple" {
+	"mrfriendly_anims\diesimple.smd"
+	activity "ACT_DIESIMPLE" -1
+	{ event 1100 8 "event_dropdead" }
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lfoot" footstep
+	ikrule "rfoot" footstep
+}
+
+$sequence "vomit" {
+	"mrfriendly_anims\vomit.smd"
+	activity "ACT_RANGE_ATTACK1" -1
+	{ event 1100 0 "event_play AttackRange" }
+	{ event 1100 20 "event_rattack vomit" }
+	{ event 1100 26 "event_rattack vomitdmg" }
+	{ event 1100 28 "event_rattack vomitdmg" }
+	{ event 1100 30 "event_rattack vomitdmg" }
+	{ event 1100 32 "event_rattack vomitdmg" }
+	{ event 1100 34 "event_rattack vomitdmg" }
+	{ event 1100 36 "event_rattack vomitdmg" }
+	{ event 1100 38 "event_rattack vomitdmg" }
+	{ event 1100 40 "event_rattack vomitdmg" }
+	{ event 1100 42 "event_rattack vomitdmg" }
+	{ event 1100 44 "event_rattack vomitdmg" }
+	{ event 1100 46 "event_rattack vomitdmg" }
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+	ikrule "lfoot" footstep
+	ikrule "rfoot" footstep
+}
+
+$sequence "ragdoll" {
+	"mrfriendly_anims\ragdoll.smd"
+	activity "ACT_DIERAGDOLL" -1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lfoot" release
+	ikrule "rfoot" release
 }
 
 $collisionjoints "mrfriendly_physics.smd"
 {
-	$mass 150
+	$mass 60
 	$inertia 10
 	$damping 0.01
 	$rotdamping 1.5
-	$rootbone "MDLDEC_Bone18"
+	$rootbone "MDLDEC_Bone19"
 
 
 	$jointconstrain "MDLDEC_Bone10" x limit -26 26 0
@@ -103,6 +230,10 @@ $collisionjoints "mrfriendly_physics.smd"
 	$jointconstrain "MDLDEC_Bone11" x limit -50 50 0
 	$jointconstrain "MDLDEC_Bone11" y limit 0 0 0
 	$jointconstrain "MDLDEC_Bone11" z limit -5 15 0
+
+	$jointconstrain "MDLDEC_Bone20" x limit 0 0 0
+	$jointconstrain "MDLDEC_Bone20" y limit 0 0 0
+	$jointconstrain "MDLDEC_Bone20" z limit 0 0 0
 
 	$jointconstrain "MDLDEC_Bone28" x limit -6 6 0
 	$jointconstrain "MDLDEC_Bone28" y limit -20 20 0
@@ -123,4 +254,8 @@ $collisionjoints "mrfriendly_physics.smd"
 	$jointconstrain "MDLDEC_Bone22" x limit -32 32 0
 	$jointconstrain "MDLDEC_Bone22" y limit -15 15 0
 	$jointconstrain "MDLDEC_Bone22" z limit -38 38 0
+
+	$jointconstrain "MDLDEC_Bone1" x limit 0 0 0
+	$jointconstrain "MDLDEC_Bone1" y limit 0 0 0
+	$jointconstrain "MDLDEC_Bone1" z limit 0 0 0
 }
