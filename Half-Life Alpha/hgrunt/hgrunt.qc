@@ -125,7 +125,7 @@ $sequence "idle1" "idle1" fps 30 loop ACT_IDLE 20
 $sequence "idle2" "idle2" fps 30 loop ACT_IDLE 1
 $sequence "combatidle" "combatidle" fps 10 loop ACT_IDLE_ANGRY 1 
 $sequence "reload" "reload" fps 30 ACT_RELOAD_SMG1 1
-$sequence "shootcycle" "shootcycle" fps 30 loop ACT_RANGE_ATTACK_SMG1 1 { event 1100 0 "colt_fire" } 
+$sequence "shootcycle" "shootcycle" fps 100 loop ACT_RANGE_ATTACK_SMG1 1 { event 1100 1 "colt_fire" } 
 $sequence "frontkick" "frontkick" fps 30 ACT_MELEE_ATTACK1 1 { event 1100 14 "event_mattack" } 
 $sequence "swim" "swim" fps 20 loop ACT_SWIM 1
 $sequence "signal" "signal" fps 30 

@@ -1,10 +1,5 @@
 $modelname "vj_hlr/hl1/boid.mdl"
-$CDMaterials "models\hl_resurgence\hl1\boid\"
-
-
-$bbox 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-$cbox 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-$eyeposition 0.000000 0.000000 0.000000
+$CDMaterials "models\hl_resurgence\hl1\"
 
 $SurfaceProp "alienflesh"
 
@@ -23,3 +18,21 @@ $hbox 0 "Bone07" 0.000000 0.000000 0.000000 15.530000 8.820000 1.700000
 // 1 animation sequence(s)
 $sequence "idle" "idle" fps 20 loop ACT_FLY 1 
 $sequence "glide" "bird_fly1" fps 20 loop ACT_GLIDE 1 
+$sequence "ragdoll" "bird_fly1" fps 20 loop ACT_DIESIMPLE 1 
+
+$collisionjoints "phy.smd" {
+
+	$mass 50.0
+	$inertia 1.00
+	$damping 0.00
+	$rotdamping 0.00
+	$rootbone "bone01"
+
+	$jointconstrain "bone02" x limit 0.00 0.00 0.00
+	$jointconstrain "bone02" y limit -30.00 30.00 0.00
+	$jointconstrain "bone02" z limit 0.00 0.00 0.00
+
+	$jointconstrain "bone06" x limit 0.00 0.00 0.00
+	$jointconstrain "bone06" y limit -30.00 30.00 0.00
+	$jointconstrain "bone06" z limit 0.00 0.00 0.00
+}
