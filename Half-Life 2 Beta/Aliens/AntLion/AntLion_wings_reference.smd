@@ -1,0 +1,833 @@
+// Created by Crowbar 0.57
+version 1
+nodes
+  0 "Antlion.Body_Bone" -1
+  1 "Antlion.Chest_Bone" 0
+  2 "Antlion.ArmR1_Bone" 1
+  3 "Antlion.ArmR2_Bone" 2
+  4 "Antlion.ArmR3_Bone" 3
+  5 "Antlion.ArmL1_Bone" 1
+  6 "Antlion.ArmL2_Bone" 5
+  7 "Antlion.ArmL3_Bone" 6
+  8 "Antlion.Head_Bone" 1
+  9 "Antlion.FangBottomL1_Bone" 8
+  10 "Antlion.FangBottomL2_Bone" 9
+  11 "Antlion.FangBottomR1_Bone" 8
+  12 "Antlion.FangBottomR2_Bone" 11
+  13 "Antlion.FangTopL1_Bone" 8
+  14 "Antlion.FangTopL2_Bone" 13
+  15 "Antlion.FangTopR1_Bone" 8
+  16 "Antlion.FangTopR2_Bone" 15
+  17 "Antlion.LegMidL1_Bone" 0
+  18 "Antlion.LegMidL2_Bone" 17
+  19 "Antlion.LegMidL3_Bone" 18
+  20 "Antlion.LegMidR1_Bone" 0
+  21 "Antlion.LegMidR2_Bone" 20
+  22 "Antlion.LegMidR3_Bone" 21
+  23 "Antlion.Back_Bone" 0
+  24 "Antlion.LegShoulder_R_Bone" 23
+  25 "Antlion.LegL1_Bone" 24
+  26 "Antlion.LegL2_Bone" 25
+  27 "Antlion.LegL3_Bone" 26
+  28 "Antlion.LegShoulder_L_Bone" 23
+  29 "Antlion.LegR1_Bone" 28
+  30 "Antlion.LegR2_Bone" 29
+  31 "Antlion.LegR3_Bone" 30
+  32 "Antlion.WingL_Bone" 0
+  33 "Antlion.WingR_Bone" 0
+  34 "Antlion.bone" 23
+  35 "MAXSceneRoot.AntLionMesh" -1
+end
+skeleton
+  time 0
+    0 -0.063165 1.526461 24.721458 1.570796 -0.244346 1.570796
+    1 -5.577779 -0.123185 0.054231 0.000000 0.000000 -0.212930
+    2 -5.512521 -2.697433 -3.989360 0.393298 -0.165999 -0.903107
+    3 10.569404 0.000000 0.000000 0.000000 0.000000 -2.401399
+    4 13.357940 0.000000 0.000000 0.000000 0.000000 2.790964
+    5 -5.435715 -2.622673 3.516682 2.761840 0.146227 -0.922288
+    6 10.523520 0.000000 0.000000 0.000000 0.000000 2.412018
+    7 13.611948 0.000001 0.000000 0.000000 0.000000 -2.810411
+    8 -8.416650 1.073515 -0.018171 0.000000 0.000000 0.172788
+    9 -9.984112 -4.710447 3.170796 -2.902516 -0.005546 -2.717710
+    10 5.945618 0.000000 0.000000 0.000000 0.000000 0.735012
+    11 -9.984110 -4.710446 -2.998739 -0.223381 0.004087 -2.697966
+    12 5.945623 -0.000001 0.000000 0.000000 0.000000 -0.753546
+    13 -13.167568 0.616876 1.590356 3.140739 -0.157522 -3.136150
+    14 1.939788 0.000000 0.000000 3.040688 0.121169 2.449692
+    15 -13.157713 0.632509 -1.795553 1.570796 0.016921 -3.058550
+    16 2.215697 0.000000 -0.000001 1.570796 -0.608107 -3.124672
+    17 -2.622040 -6.273479 8.263164 -2.853637 0.102241 -1.108476
+    18 11.485749 0.000000 0.000000 0.000000 0.000000 -1.867940
+    19 24.536900 -0.000001 -0.000001 0.000000 0.000000 2.267129
+    20 -2.622039 -6.273479 -8.136835 -0.285519 -0.090695 -1.166804
+    21 11.659970 0.000000 0.000000 0.000000 0.000000 1.907643
+    22 25.724377 0.000000 0.000000 0.000000 0.000000 -2.273544
+    23 3.880158 -0.980432 0.090609 0.000000 0.000000 0.769690
+    24 13.389691 0.268265 -6.517195 0.542283 1.306249 -0.395924
+    25 9.913784 0.000001 0.000000 1.460656 0.680633 -1.788173
+    26 21.016012 0.000001 0.000000 0.000000 0.000000 -1.855747
+    27 28.471632 -0.000001 0.000000 0.000000 0.000000 2.096656
+    28 13.389687 0.268266 6.023556 -0.462585 -1.348926 -0.488759
+    29 9.768897 0.000001 0.000001 -1.503886 -0.788443 -1.726268
+    30 19.931139 0.000000 0.000000 0.000000 0.000000 -1.746197
+    31 26.044121 0.000002 0.000000 0.000000 0.000000 2.098002
+    32 -5.849912 4.319725 0.063164 0.461552 0.000000 0.804073
+    33 -5.827132 4.411092 0.063164 -0.329881 0.005779 0.804072
+    34 13.389687 0.268266 6.023556 -0.462585 -1.348926 -0.488759
+    35 -0.077740 0.000000 0.000001 1.570796 0.000000 0.000000
+end
+triangles
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+// wingblur
+// 
+// 
+// 
+end

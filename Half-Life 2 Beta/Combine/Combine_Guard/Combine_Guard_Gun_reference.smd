@@ -1,0 +1,1739 @@
+// Created by Crowbar 0.57
+version 1
+nodes
+  0 "Bip01" -1
+  1 "Bip01 Pelvis" 0
+  2 "Bip01 Spine" 1
+  3 "Bip01 Spine1" 2
+  4 "Bip01 Spine2" 3
+  5 "Bip01 Spine3" 4
+  6 "Bip01 Neck" 5
+  7 "Bip01 Neck1" 6
+  8 "Bip01 Neck2" 7
+  9 "Bip01 Neck3" 8
+  10 "Bip01 Neck4" 9
+  11 "Bip01 Head" 10
+  12 "Bip01 L Clavicle" 6
+  13 "Bip01 L UpperArm" 12
+  14 "Bip01 L Forearm" 13
+  15 "Bip01 L Hand" 14
+  16 "Bip01 L Finger0" 15
+  17 "Bip01 L Finger01" 16
+  18 "Bip01 L Finger1" 15
+  19 "Bip01 L Finger11" 18
+  20 "Bip01 L Finger2" 15
+  21 "Bip01 L Finger21" 20
+  22 "Bip01 L Finger3" 15
+  23 "Bip01 L Finger31" 22
+  24 "Dummy12" 14
+  25 "Dummy13" 14
+  26 "Bip01 R Clavicle" 6
+  27 "Bip01 R UpperArm" 26
+  28 "Bip01 R Forearm" 27
+  29 "Bip01 R Hand" 28
+  30 "Bip01 R Finger0" 29
+  31 "Bip01 R Finger01" 30
+  32 "Bip01 R Finger1" 29
+  33 "Bip01 R Finger11" 32
+  34 "Bip01 R Finger2" 29
+  35 "Bip01 R Finger21" 34
+  36 "Bip01 R Finger3" 29
+  37 "Bip01 R Finger31" 36
+  38 "Bip01 L Thigh" 2
+  39 "Bip01 L Calf" 38
+  40 "Bip01 L Foot" 39
+  41 "Bip01 L Toe0" 40
+  42 "Bip01 R Thigh" 2
+  43 "Bip01 R Calf" 42
+  44 "Bip01 R Foot" 43
+  45 "Bip01 R Toe0" 44
+  46 "gun" 29
+  47 "muzzle" 46
+  48 "Combine_Guard" 1
+end
+skeleton
+  time 0
+    0 -0.126810 0.000000 42.888451 0.000000 0.000000 -1.570795
+    1 0.000000 0.000000 0.000000 0.000000 -1.570451 -1.570795
+    2 4.457572 -0.007659 0.000006 -0.000004 -0.000001 -0.034110
+    3 9.627245 -0.006742 0.000000 0.000000 0.000000 0.000000
+    4 8.466674 -0.006685 0.000000 0.000000 0.000000 0.000000
+    5 8.395748 -0.006744 0.000000 0.000000 0.000000 0.043633
+    6 8.477295 -0.006863 0.000000 0.000000 0.000000 0.000000
+    7 8.618925 -0.004088 0.000000 0.000000 0.000000 0.000000
+    8 5.134138 -0.003817 0.000000 0.000000 0.000000 0.000000
+    9 4.793682 -0.003710 0.000000 0.000000 0.000000 0.000000
+    10 4.659098 -0.004630 0.000000 0.000000 0.000000 0.000000
+    11 5.814571 0.000000 0.000000 0.000000 0.000000 -0.035704
+    12 0.000001 0.006856 2.564222 0.338421 -1.359117 2.809382
+    13 9.403798 0.000000 0.000006 0.000537 1.043356 0.067393
+    14 21.048714 0.000000 0.000002 0.000000 0.000000 0.018171
+    15 17.720572 0.000000 -0.000005 -1.588887 0.052549 0.051512
+    16 2.487197 2.252948 -3.186361 -0.073052 0.765360 -0.097415
+    17 4.838116 -0.000002 -0.000003 0.000000 0.000000 0.000000
+    18 6.976585 0.112351 -2.350901 -0.000842 0.331613 -0.000274
+    19 5.114878 0.000001 0.000000 0.000000 0.000000 0.000000
+    20 6.938716 0.000001 0.000000 -0.000796 0.000000 0.000000
+    21 3.532217 -0.000001 0.000000 0.000000 0.000000 0.000000
+    22 6.938712 0.002232 2.801262 -0.000842 -0.331612 0.000274
+    23 3.999934 0.000003 0.000000 0.000000 0.000000 0.000000
+    24 -2.041905 0.262624 5.246602 -1.475256 -1.452981 3.008821
+    25 13.418331 -0.316883 5.830305 1.296067 -1.529451 0.236618
+    26 0.000005 0.006870 -2.564222 -0.338446 1.359115 2.809358
+    27 9.403801 0.000000 0.000006 -0.000537 -1.043356 0.067393
+    28 21.048731 0.000000 0.000003 0.000000 0.000000 0.018171
+    29 17.720575 0.000000 0.000002 1.588887 -0.052549 0.051512
+    30 2.487193 2.252944 3.186361 0.073052 -0.765360 -0.097415
+    31 4.838117 0.000000 0.000002 0.000000 0.000000 0.000000
+    32 6.976584 0.112344 2.350900 0.000842 -0.331613 -0.000274
+    33 5.114881 -0.000001 0.000000 0.000000 0.000000 0.000000
+    34 6.938711 -0.000002 0.000000 0.000796 0.000000 0.000000
+    35 3.532213 -0.000002 0.000000 0.000000 0.000000 0.000000
+    36 6.938708 0.002228 -2.801262 0.000842 0.331612 0.000274
+    37 3.999933 0.000001 0.000001 0.000000 0.000000 0.000000
+    38 -4.455238 -0.144385 7.907805 2.942133 -0.022571 -3.083051
+    39 12.504438 0.000000 0.000000 0.000000 0.000000 -0.243633
+    40 21.767338 0.000001 0.000000 -0.010521 -0.026959 0.263116
+    41 9.138554 10.342165 0.000001 0.000000 0.000000 1.570796
+    42 -4.455238 -0.144341 -7.907805 -2.942139 0.022572 -3.083051
+    43 12.504436 0.000000 0.000001 0.000000 0.000000 -0.243633
+    44 21.767344 0.000002 0.000000 0.010521 0.026959 0.263116
+    45 9.138556 10.342167 0.000000 0.000000 0.000000 1.570796
+    46 30.944845 10.571697 19.574089 1.621739 -0.797402 -2.903002
+    47 0.118729 36.095409 -0.125876 1.570797 0.000000 1.570797
+    48 6.846551 0.000000 0.126819 0.000000 -1.570796 3.141592
+end
+triangles
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+// CombineWeapon
+// 
+// 
+// 
+end
