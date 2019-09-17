@@ -1,6 +1,7 @@
 // Created by Crowbar 0.57
 
 $modelname "vj_hlr/sven/tor.mdl"
+$CDMaterials "models\chrome\tor\"
 $CDMaterials "models\hl_resurgence\sven\tor\"
 
 $surfaceprop "alienflesh"

@@ -5,7 +5,7 @@ $CDMaterials "models/hl_resurgence/hlze/"
 $CDMaterials "models/hl_resurgence/hlze/zombie/"
 $CDMaterials "models/hl_resurgence/hlze/hassassin/"
 
-$surfaceprop "alienflesh"
+$surfaceprop "zombieflesh"
 
 $bodygroup "body"
 {
@@ -187,7 +187,7 @@ $collisionjoints "hassassin_physics.smd"
 
 	$jointconstrain "Bip01 L Leg1" x limit -10 10 0.04
 	$jointconstrain "Bip01 L Leg1" y limit 0 0 0
-	$jointconstrain "Bip01 L Leg1" z limit -90 0 0.04
+	$jointconstrain "Bip01 L Leg1" z limit -10 117 0.04
 
 	$jointconstrain "Bip01 L Foot" x limit -30 30 0.04
 	$jointconstrain "Bip01 L Foot" y limit -35 35 0.04

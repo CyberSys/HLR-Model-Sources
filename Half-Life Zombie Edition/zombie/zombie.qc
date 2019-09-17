@@ -29,7 +29,7 @@ $BodyGroup "nade"
 }
 
 // Called when bullets or physics touch the model
-$SurfaceProp "alienflesh"
+$SurfaceProp "zombieflesh"
 
 // Used for non-hitbox traces
 $Contents "solid"
@@ -72,6 +72,15 @@ $HBox 5 "Bip01 R Hand" -0.590000 -1.470000 -1.680000 5.320000 0.570000 2.810000
 
 // Sets the min max z for a pose parameter
 $PoseParameter "move_yaw" -180 180 0
+
+$Sequence "ragdoll" {
+	"scientist_nohead.smd"
+	activity "ACT_DIESIMPLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+}
 
 $Sequence "idle1" {
 	"animations/idle1.smd"
@@ -361,8 +370,8 @@ $sequence "limp_leg_attack3" {
 	{event 1100 6 "mattack both"}
 	fps 15
 }
-
-$collisionjoints "zombie_physics.smd"
+// Had to manually fix it myself.
+$collisionjoints "zombie_phy_fixed2.smd"
 {
 	$mass 115
 	$inertia 10
@@ -407,10 +416,11 @@ $collisionjoints "zombie_physics.smd"
 	$jointconstrain "Bip01 R Calf" y limit 0 0 0
 	$jointconstrain "Bip01 R Calf" z limit -95 4 0.04
 
-	$jointrotdamping "Bip01 Head" 5
-	$jointconstrain "Bip01 Head" x limit -20 20 0.04
-	$jointconstrain "Bip01 Head" y limit -25 25 0.04
-	$jointconstrain "Bip01 Head" z limit -13 30 0.04
+	// - Head bone doesn't exist, the model is weirdly rigged, thus causing HL:S physics to not work properly. Engine could not find the correct bone to attach the head collision, resulting in detachment. Arms were detaching as well due to them being directly connected to the Neck bone.
+	// $jointrotdamping "Bip01 Head" 5
+	// $jointconstrain "Bip01 Head" x limit -20 20 0.04
+	// $jointconstrain "Bip01 Head" y limit -25 25 0.04
+	// $jointconstrain "Bip01 Head" z limit -13 30 0.04
 
 	$jointconstrain "Bip01 L Thigh" x limit -25 20 0.04
 	$jointconstrain "Bip01 L Thigh" y limit -20 40 0.04
