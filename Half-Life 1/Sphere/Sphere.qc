@@ -23,7 +23,7 @@ $body studio "Sphere_Template_Biped1"
 
 $sequence idle_off "Sphere_Idle1" frames 0 0 fps 1 ACT_IDLE 1
 $sequence idle_on "idle_on" frames 0 0 fps 1 ACT_IDLE_ANGRY 1
-$sequence fire "Sphere_shoot1" fps 33 loop ACT_RANGE_ATTACK1 1
+$sequence fire "Sphere_shoot1" fps 33 loop ACT_RANGE_ATTACK1 1 { event 1100 1 "shoot" }
 $sequence deploy "Sphere_Deploy1" fps 30 ACT_DEPLOY 1
 $sequence retire "Sphere_Retire1" fps 30 ACT_RETIRE 1
 $sequence ragdoll "ragdoll" fps 30 ACT_DIERAGDOLL 1
