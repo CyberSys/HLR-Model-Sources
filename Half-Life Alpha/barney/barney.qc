@@ -30,8 +30,9 @@ $body "studio" "barney_reference-2"
 
 $bodygroup "weapons"
 {
-studio "barney_reference_mesh_with_pistol1"
 studio "barney_reference-2_holstered_gun"
+studio "barney_reference_mesh_with_pistol1"
+studio "barney_reference-2_arm"
 }
 
 
@@ -65,19 +66,89 @@ $hbox 0 "unnamed045" -2.210000 -10.520000 -4.310000 2.920000 0.400000 5.120000
 $sequence "idle1" "idle1" fps 15 loop ACT_IDLE 10 
 $sequence "idle2" "idle2" fps 15 ACT_IDLE 1 
 $sequence "idle3" "idle3" fps 15 ACT_IDLE 1 
-$sequence "walk" "walk" LX fps 30 loop ACT_WALK 1 { event 1100 11 "step" } { event 1100 23 "step" } 
-$sequence "run" "run" LX fps 30 loop ACT_RUN 1 { event 1100 8 "step" } { event 1100 17 "step" } 
+$sequence "ragdoll" "barney_reference-2_holstered_gun" fps 15 ACT_DIERAGDOLL 1 
+$sequence "walk" "anims/walk" LX fps 30 loop ACT_WALK 1 { event 1100 11 "step" } { event 1100 23 "step" } 
+$sequence "run" "anims/run" LX fps 30 loop ACT_RUN 1 { event 1100 8 "step" } { event 1100 17 "step" } 
 $sequence "walkdraw" "walkdraw" fps 30 
-$sequence "draw" "draw" fps 15 ACT_DRAW 1 
-$sequence "drawslow" "drawslow" fps 15 ACT_DRAW 1 
+$sequence "draw" "draw" fps 15 ACT_ARM 1 
+$sequence "drawslow" "drawslow" fps 15 ACT_ARMSLOW 1 
 $sequence "walkshoot" "walkshoot" fps 15 
-$sequence "aim" "aim" fps 5 loop ACT_COMBAT_IDLE 1 
-$sequence "shootgun" "shootgun" fps 10 ACT_SHOOT 1 
-$sequence "replacegun" "replacegun" fps 15 ACT_HOLSTER 1 
+$sequence "aim" "aim" fps 5 loop ACT_IDLE_ANGRY 1 
+$sequence "shootgun" "shootgun" fps 10 loop ACT_RANGE_ATTACK1 1 { event 1100 1 "shoot" } 
+$sequence "replacegun" "replacegun" fps 15 ACT_DISARM 1 
 $sequence "diesimple" "diesimple" X fps 15 ACT_DIESIMPLE 1 
 $sequence "dieforward" "dieforward" X fps 15 ACT_DIEFORWARD 1 
 $sequence "diebackward" "diebackward" X fps 15 ACT_DIEBACKWARD 1 
 $sequence "dieviolent" "dieviolent" X fps 15 ACT_DIEVIOLENT 1 
 $sequence "diecrump" "diecrump" X fps 15 ACT_DIECRUMP 1 
+
+$collisionjoints "phy.smd" {
+
+	$mass 90
+	$inertia 1.00
+	$damping 0.00
+	$rotdamping 0.00
+	$rootbone "unnamed002"
+
+	$jointconstrain "unnamed018" x limit -15.00 15.00 0.00
+	$jointconstrain "unnamed018" y limit -6.00 6.00 0.00
+	$jointconstrain "unnamed018" z limit -21.00 21.00 0.00
+
+	$jointconstrain "unnamed019" x limit 0.00 0.00 0.00
+	$jointconstrain "unnamed019" y limit 0.00 0.00 0.00
+	$jointconstrain "unnamed019" z limit -6.00 6.00 0.00
+
+	$jointconstrain "unnamed031" x limit 0.00 124.00 0.00
+	$jointconstrain "unnamed031" y limit -39.00 39.00 0.00
+	$jointconstrain "unnamed031" z limit -59.00 8.00 0.00
+
+	$jointconstrain "unnamed023" x limit -61.00 61.00 0.00
+	$jointconstrain "unnamed023" y limit -117.00 39.00 0.00
+	$jointconstrain "unnamed023" z limit -126.00 64.00 0.00
+
+	$jointconstrain "unnamed024" x limit 0.00 0.00 0.00
+	$jointconstrain "unnamed024" y limit 0.00 0.00 0.00
+	$jointconstrain "unnamed024" z limit -84.00 35.00 0.00
+
+	$jointconstrain "unnamed025" x limit -12.00 12.00 0.00
+	$jointconstrain "unnamed025" y limit -12.00 12.00 0.00
+	$jointconstrain "unnamed025" z limit -12.00 12.00 0.00
+
+	$jointconstrain "unnamed032" x limit 0.00 0.00 0.00
+	$jointconstrain "unnamed032" y limit 0.00 0.00 0.00
+	$jointconstrain "unnamed032" z limit -41.00 68.00 0.00
+
+	$jointconstrain "unnamed033" x limit -12.00 12.00 0.00
+	$jointconstrain "unnamed033" y limit -12.00 12.00 0.00
+	$jointconstrain "unnamed033" z limit -12.00 12.00 0.00
+
+	$jointconstrain "unnamed010" x limit -21.00 21.00 0.00
+	$jointconstrain "unnamed010" y limit -21.00 15.00 0.00
+	$jointconstrain "unnamed010" z limit -50.00 70.00 0.00
+
+	$jointconstrain "unnamed011" x limit 0.00 0.00 0.00
+	$jointconstrain "unnamed011" y limit 0.00 0.00 0.00
+	$jointconstrain "unnamed011" z limit -82.00 6.00 0.00
+
+	$jointconstrain "unnamed012" x limit -12.00 12.00 0.00
+	$jointconstrain "unnamed012" y limit -12.00 12.00 0.00
+	$jointconstrain "unnamed012" z limit -12.00 12.00 0.00
+
+	$jointconstrain "unnamed003" x limit -21.00 21.00 0.00
+	$jointconstrain "unnamed003" y limit -15.00 21.00 0.00
+	$jointconstrain "unnamed003" z limit -21.00 91.00 0.00
+
+	$jointconstrain "unnamed004" x limit 0.00 0.00 0.00
+	$jointconstrain "unnamed004" y limit 0.00 0.00 0.00
+	$jointconstrain "unnamed004" z limit -82.00 19.00 0.00
+
+	$jointconstrain "unnamed005" x limit -12.00 12.00 0.00
+	$jointconstrain "unnamed005" y limit -12.00 12.00 0.00
+	$jointconstrain "unnamed005" z limit -12.00 12.00 0.00
+
+	$jointconstrain "unnamed038" x limit -30.00 30.00 0.00
+	$jointconstrain "unnamed038" y limit -15.00 15.00 0.00
+	$jointconstrain "unnamed038" z limit -30.00 30.00 0.00
+}
 
 // End of QC script.
