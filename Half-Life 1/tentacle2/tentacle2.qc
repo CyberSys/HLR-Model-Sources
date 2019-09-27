@@ -127,14 +127,17 @@ $sequence "Floor_Strike" {
 $sequence "Floor_Tap" {
 	"tentacle2_anims\Floor_Tap_blend01.smd"
 	"tentacle2_anims\Floor_Tap_blend02.smd"
-	activity "ACT_IDLE" 1
+	activity "ACT_IDLE" 5
 	blend "X" 0 376
 	blendwidth 2
 	{ event 6 7 "" }
+	{ event 1100 7 "sparks" }
 	{ event 5002 7 "1" }
 	{ event 6 13 "" }
+	{ event 1100 13	"sparks" }
 	{ event 5002 13 "1" }
 	{ event 6 20 "" }
+	{ event 1100 20 "sparks" }
 	{ event 5002 20 "1" }
 	fadein 0.2
 	fadeout 0.2
@@ -247,12 +250,14 @@ $sequence "Lev1_Strike" {
 $sequence "Lev1_Tap" {
 	"tentacle2_anims\Lev1_Tap.smd"
 	"tentacle2_anims\Lev1_Tap_2.smd"
-	activity "ACT_1021" 1
+	activity "ACT_IDLE_RELAXED" 5
 	blend "X" 0 376
 	blendwidth 2
 	{ event 6 7 "" }
+	{ event 1100 7 "sparks" }
 	{ event 5002 7 "1" }
 	{ event 6 13 "" }
+	{ event 1100 13 "sparks" }
 	{ event 5002 13 "1" }
 	fadein 0.2
 	fadeout 0.2
@@ -357,12 +362,14 @@ $sequence "Lev2_Strike" {
 $sequence "Lev2_Tap" {
 	"tentacle2_anims\Lev2_Tap.smd"
 	"tentacle2_anims\Lev2_Tap_2.smd"
-	activity "ACT_1022" 1
+	activity "ACT_IDLE_ANGRY_MELEE" 5
 	blend "X" 0 376
 	blendwidth 2
 	{ event 6 7 "" }
+	{ event 1100 7 "sparks" }
 	{ event 5002 7 "1" }
 	{ event 6 13 "" }
+	{ event 1100 13 "sparks" }
 	{ event 5002 13 "1" }
 	fadein 0.2
 	fadeout 0.2
@@ -470,12 +477,14 @@ $sequence "Lev3_Strike" {
 $sequence "Lev3_Tap" {
 	"tentacle2_anims\Lev3_Tap.smd"
 	"tentacle2_anims\Lev3_Tap_2.smd"
-	activity "ACT_1023" 1
+	activity "ACT_IDLE_ANGRY" 5
 	blend "X" 0 376
 	blendwidth 2
 	{ event 6 7 "" }
+	{ event 1100 7 "sparks" }
 	{ event 5002 7 "1" }
 	{ event 6 13 "" }
+	{ event 1100 13 "sparks" }
 	{ event 5002 13 "1" }
 	fadein 0.2
 	fadeout 0.2
