@@ -1,10 +1,8 @@
 // Created by Crowbar 0.57
 
-$modelname "massn.mdl"
-$cd "."
-$cdtexture "."
-$cliptotextures
-$scale 1.0
+$modelname "vj_hlr/hl_hd/massn.mdl"
+$CDMaterials "models/hl_resurgence/hl_hd/"
+$CDMaterials "models/hl_resurgence/hl_hd/massn/"
 
 $bodygroup "studio"
 {
@@ -22,8 +20,6 @@ $bodygroup "weapons"
 	studio "massn_M40A1_reference"
 	blank
 }
-
-$flags 0
 
 $eyeposition 0 0 73
 
@@ -45,8 +41,6 @@ $texturegroup "skinfamilies"
 		"sniper_ammo.bmp"
 	}
 }
-
-$texrendermode "nvg_glow.bmp" additive
 
 $attachment 0 "Bip01 R Hand" 35 2.5 8.5
 $attachment 1 "Bip01 R Hand" 0 0 0
@@ -74,365 +68,338 @@ $hbox 0 "Bip01 Head" 0 -4 -3.69 12.94 6 3.91
 
 $controller Mouth "Bone05" ZR 0 45
 
-$sequence "walk1" {
-	"massn_anims\walk1"
-	ACT_WALK 1
-	fps 35
+$Sequence "walk1" {
+	"walk1.smd"
+	activity "ACT_WALK" 1
+	fps 30
 	loop
-	LX
+	walkframe 300 LX
+	{ event 1100 3 "event_emit step" }
+	{ event 1100 25 "event_emit step" }
+	{ event 1100 46 "event_emit step" }
+	{ event 1100 67 "event_emit step" }
 }
-$sequence "run" {
-	"massn_anims\run"
-	ACT_RUN 1
+
+$Sequence "run" {
+	"run.smd"
+	activity "ACT_RUN" 1
 	fps 55
 	loop
-	LX
+	walkframe 300 LX
+	{ event 1100 9 "event_emit step" }
+	{ event 1100 17 "event_emit step" }
 }
-$sequence "victorydance" {
-	"massn_anims\victorydance"
-	ACT_VICTORY_DANCE 1
-	fps 21
+
+$Sequence "sprint" {
+	"run.smd"
+	activity "ACT_SPRINT" 1
+	fps 63
+	loop
+	walkframe 300 LX
+	{ event 1100 9 "event_emit step" }
+	{ event 1100 17 "event_emit step" }
 }
-$sequence "cower" {
-	"massn_anims\cower"
-	ACT_COWER 1
-	fps 14
-}
-$sequence "smflinch" {
-	"massn_anims\smflinch"
-	ACT_SMALL_FLINCH 5
+
+$sequence "strafeleft" "strafeleft" LX LY fps 40 ACT_STRAFE_LEFT 1 
+$sequence "straferight" "straferight" LX LY fps 40 ACT_STRAFE_RIGHT 1 
+
+$Sequence "smflinch" {
+	"smflinch.smd"
+	activity "ACT_SMALL_FLINCH" 1
 	fps 20
 }
-$sequence "launchgrenade" {
-	"massn_anims\launchgrenade"
-	ACT_RANGE_ATTACK2 1
-	{ event 8 24 }
+
+$Sequence "launchgrenade" {
+	"launchgrenade.smd"
+	activity "ACT_SPECIAL_ATTACK1" 1
 	fps 30
+	{ event 1100 16 "event_rattack shootgrenade" }
 }
-$sequence "throwgrenade" {
-	"massn_anims\throwgrenade"
-	ACT_RANGE_ATTACK2 1
-	{ event 7 34 }
+
+$Sequence "throwgrenade" {
+	"throwgrenade.smd"
+	activity "ACT_SPECIAL_ATTACK2" 1
 	fps 30
+	{ event 1100 36 "event_rattack throwgrenade" }
 }
-$sequence "idle1" {
-	"massn_anims\idle1"
-	ACT_IDLE 1
+
+$sequence "cower" "cower" fps 28 ACT_COWER 1 
+
+$Sequence "idle1" {
+	"idle1.smd"
+	activity "ACT_IDLE" 1
 	fps 30
 	loop
 }
-$sequence "idle2" {
-	"massn_anims\idle2"
-	ACT_IDLE 1
+
+$Sequence "idle2" {
+	"idle2.smd"
+	activity "ACT_IDLE" 1
+	fps 10
+	loop
+}
+
+$Sequence "combatidle" {
+	"combatidle.smd"
+	activity "ACT_IDLE_ANGRY" 1
 	fps 30
 	loop
 }
-$sequence "combatidle" {
-	"massn_anims\combatidle"
-	ACT_IDLE_ANGRY 1
+
+$sequence "frontkick_1" "frontkick_1" fps 35 ACT_MELEE_ATTACK1 1 { event 1100 14 "event_mattack" } 
+$sequence "frontkick_2" "frontkick_2" fps 25 ACT_MELEE_ATTACK2 1 {
+  { event 1100 5 "event_mattack" } 
+  { event 1100 16 "event_mattack" } 
+ }
+$sequence "frontkick_3" "frontkick_3" LX LY fps 40 ACT_MELEE_ATTACK_SWING 1 {
+  { event 1100 12 "event_mattack" }  
+  { event 1100 30 "event_mattack" }  
+  { event 1100 43 "event_mattack" } 
+  { event 1100 56 "event_mattack" } 
+ }
+
+$Sequence "crouching_idle" {
+	"crouching_idle.smd"
+	activity "ACT_CROUCHIDLE" 1
+	fps 30
+	loop
+}
+
+$Sequence "crouching_mp5" {
+	"crouching_mp5_blend01.smd"
+	"crouching_mp5_blend02.smd"
+	blendwidth 2
+	blend "aim_pitch" -45 45
+	activity "ACT_RANGE_ATTACK_SMG1_LOW" 1
 	fps 20
 	loop
+	{ event 1100 0 "event_rattack mp5_fire" }
+	{ event 1100 2 "event_rattack mp5_fire" }
+	{ event 1100 4 "event_rattack mp5_fire" }
 }
-$sequence "frontkick_1" {
-	"massn_anims\frontkick_1"
-	ACT_MELEE_ATTACK1 1
-	{ event 3 13 }
-	{ event 2010 13 }
-	fps 35
+
+$Sequence "standing_mp5" {
+	"standing_mp5_blend01.smd"
+	"standing_mp5_blend02.smd"
+	blendwidth 2
+	blend "aim_pitch" -45 45
+	activity "ACT_RANGE_ATTACK_SMG1" 1
+	fps 20
+	loop
+	{ event 1100 0 "event_rattack mp5_fire" }
+	{ event 1100 2 "event_rattack mp5_fire" }
+	{ event 1100 4 "event_rattack mp5_fire" }
 }
-$sequence "frontkick_2" {
-	"massn_anims\frontkick_2"
-	ACT_MELEE_ATTACK1 1
-	{ event 2010 5 }
-	{ event 3 5 }
-	{ event 2010 16 }
-	{ event 3 16 }
-	fps 25
+
+$sequence "limpingwalk" "limpingwalk" LX fps 30 loop { event 1100 3 "event_emit step" } { event 1100 20 "event_emit step" } ACT_WALK_HURT 1 
+$sequence "limpingrun" "limpingrun" LX fps 30 loop { event 1100 0 "event_emit step" } { event 1100 9 "event_emit step" } ACT_RUN_HURT 1 
+
+$sequence "repel_jump" "repel_jump" fps 22 ACT_RAPPEL_START 1 
+$sequence "repel_repel" "repel_repel" fps 18 loop frames 0 1 ACT_RAPPEL_FIRE1 1 
+$sequence "repel_shoot_mp5" {
+	"repel_shoot_blend01.smd"
+	"repel_shoot_blend02.smd"
+	blendwidth 2
+	blend aim_pitch -90 45
+	fps 18
+	loop
+	activity "ACT_RAPPEL_FIRE_MP5" 1
+  { event 1100 1 "event_rattack mp5_fire" } 
+  { event 1100 3 "event_rattack mp5_fire" } 
+  { event 1100 5 "event_rattack mp5_fire" } 
 }
-$sequence "frontkick_3" {
-	"massn_anims\frontkick_3"
-	ACT_MELEE_ATTACK1 1
-	{ event 2010 12 }
-	{ event 3 12 }
-	{ event 2010 30 }
-	{ event 3 30 }
-	{ event 2010 43 }
-	{ event 3 43 }
-	{ event 2010 56 }
-	{ event 3 56 }
+
+$sequence "repel_land" "repel_land" fps 20 ACT_RAPPEL_LAND 1 
+$sequence "repel_die" "repel_die" fps 12 ACt_RAPPEL_DIE 1 
+$Sequence "reload_mp5" {
+	"reload_mp5.smd"
+	activity "ACT_RELOAD_SMG1" 1
 	fps 40
-	LX LY
+	{ event 1100 0 "event_reload mp5_start" }
+	{ event 1100 47 "event_reload mp5_finish" }
 }
-$sequence "crouching_idle" {
-	"massn_anims\crouching_idle"
-	fps 15
-	loop
-}
-$sequence "crouching_wait" {
-	"massn_anims\crouching_wait"
-	ACT_CROUCH 0
-	fps 15
-}
-$sequence "crouching_mp5" {
-	"massn_anims\crouching_mp5_blend01"
-	"massn_anims\crouching_mp5_blend02"
-	ACT_RANGE_ATTACK1 1
-	blend XR -45 45
-	{ event 4 1 }
-	{ event 5 5 }
-	{ event 6 9 }
-	{ event 5001 1 "50" }
-	{ event 5001 5 "50" }
-	{ event 5001 9 "50" }
+
+$sequence "crouching_m40a1" "fixed/crouching_m40a1_blend01" "fixed/crouching_m40a1_blend02" blend aim_pitch -45 45 blendwidth 2 fps 15 loop ACT_RANGE_ATTACK_AR2_LOW 1 { event 1100 1 "event_rattack mp5_fire" } 
+$sequence "standing_m40a1" "fixed/standing_m40a1_blend01" "fixed/standing_m40a1_blend02" blend aim_pitch -45 45 blendwidth 2 fps 15 loop ACT_RANGE_ATTACK_AR2 1 { event 1100 1 "event_rattack mp5_fire" } 
+$sequence "reload_m40a1" "reload_m40a1" fps 40 ACT_RELOAD_PISTOL 1 { event 1100 0 "event_reload m40a1_start" } { event 1100 55 "event_reload m40a1_finish" } 
+
+$Sequence "crouching_shotgun" {
+	"crouching_shotgun_blend01.smd"
+	"crouching_shotgun_blend02.smd"
+	blendwidth 2
+	blend "aim_pitch" -45 45
+	activity "ACT_RANGE_ATTACK_SHOTGUN_LOW" 1
 	fps 20
 	loop
+	{ event 1100 0 "event_rattack shotgun_fire" }
 }
-$sequence "standing_mp5" {
-	"massn_anims\standing_mp5_blend01"
-	"massn_anims\standing_mp5_blend02"
-	blend XR -45 45
-	{ event 4 1 }
-	{ event 5 5 }
-	{ event 6 9 }
-	{ event 5001 1 "50" }
-	{ event 5001 5 "50" }
-	{ event 5001 9 "50" }
+
+$Sequence "standing_shotgun" {
+	"standing_shotgun_blend01.smd"
+	"standing_shotgun_blend02.smd"
+	blendwidth 2
+	blend "aim_pitch" -45 45
+	activity "ACT_RANGE_ATTACK_SHOTGUN" 1
 	fps 20
 	loop
+	{ event 1100 0 "event_rattack shotgun_fire" }
 }
-$sequence "reload_mp5" {
-	"massn_anims\reload_mp5"
-	ACT_RELOAD 1
-	{ event 2 41 }
-	fps 36
-}
-$sequence "crouching_shotgun" {
-	"massn_anims\crouching_shotgun_blend01"
-	"massn_anims\crouching_shotgun_blend02"
-	ACT_RANGE_ATTACK1 1
-	blend XR -45 45
-	{ event 4 1 }
-	{ event 5001 1 "51" }
-	fps 20
-}
-$sequence "standing_shotgun" {
-	"massn_anims\standing_shotgun_blend01"
-	"massn_anims\standing_shotgun_blend02"
-	blend XR -45 45
-	{ event 4 1 }
-	{ event 5001 1 "51" }
-	fps 20
-}
-$sequence "reload_shotgun" {
-	"massn_anims\reload_shotgun"
-	{ event 2 41 }
-	fps 36
-}
-$sequence "crouching_m40a1" {
-	"massn_anims\crouching_m40a1_blend01"
-	"massn_anims\crouching_m40a1_blend02"
-	ACT_RANGE_ATTACK1 1
-	blend XR -45 45
-	{ event 4 1 }
-	{ event 5001 1 "51" }
-	fps 15
-}
-$sequence "standing_m40a1" {
-	"massn_anims\standing_m40a1_blend01"
-	"massn_anims\standing_m40a1_blend02"
-	blend XR -45 45
-	{ event 4 1 }
-	{ event 5001 1 "51" }
-	fps 15
-}
-$sequence "reload_m40a1" {
-	"massn_anims\reload_m40a1"
-	{ event 2 55 }
+
+$Sequence "reload_shotgun" {
+	"reload_shotgun.smd"
+	activity "ACT_RELOAD_SHOTGUN" 1
 	fps 40
+	loop
+	{ event 1100 0 "event_reload shotgun_start" }
+	{ event 1100 47 "event_reload shotgun_finish" }
 }
-$sequence "advance_signal" {
-	"massn_anims\advance_signal"
-	ACT_SIGNAL1 1
-	{ event 10 7 }
-	fps 25
+
+$Sequence "advance_signal" {
+	"advance_signal.smd"
+	activity "ACT_SIGNAL1" 1
+	fps 30
+	{ event 1100 1 "event_signal advance" }
 }
-$sequence "flank_signal" {
-	"massn_anims\flank_signal"
-	ACT_SIGNAL2 1
-	fps 19
-}
-$sequence "retreat_signal" {
-	"massn_anims\retreat_signal"
-	ACT_SIGNAL3 1
-	fps 25
-}
-$sequence "drop_grenade" {
-	"massn_anims\drop_grenade"
-	ACT_SPECIAL_ATTACK1 1
-	{ event 9 31 }
+
+$Sequence "flank_signal" {
+	"flank_signal.smd"
+	activity "ACT_SIGNAL2" 1
 	fps 40
+	{ event 1100 1 "event_signal flank" }
 }
-$sequence "limpingwalk" {
-	"massn_anims\limpingwalk"
-	ACT_WALK_HURT 1
+
+$Sequence "retreat_signal" {
+	"retreat_signal.smd"
+	activity "ACT_SIGNAL3" 1
 	fps 30
-	loop
-	LX
+	{ event 1100 1 "event_signal retreat" }
 }
-$sequence "limpingrun" {
-	"massn_anims\limpingrun"
-	ACT_RUN_HURT 1
-	fps 30
-	loop
-	LX
-}
-$sequence "180L" {
-	"massn_anims\180L"
-	ACT_TURN_LEFT 1
+
+$Sequence "180L" {
+	"180L.smd"
+	activity "ACT_TURN_LEFT" 1
 	fps 12
+	loop
 }
-$sequence "180R" {
-	"massn_anims\180R"
-	ACT_TURN_RIGHT 1
+
+$Sequence "180R" {
+	"180R.smd"
+	activity "ACT_TURN_RIGHT" 1
 	fps 12
+	loop
 }
-$sequence "strafeleft" {
-	"massn_anims\strafeleft"
-	ACT_STRAFE_LEFT 1
-	fps 40
-}
-$sequence "straferight" {
-	"massn_anims\straferight"
-	ACT_STRAFE_RIGHT 1
-	fps 40
-}
-$sequence "dieback1" {
-	"massn_anims\dieback1"
-	ACT_DIEBACKWARD 1
-	{ event 11 5 }
-	{ event 2001 17 }
+
+$Sequence "dieback1" {
+	"dieback1.smd"
+	activity "ACT_DIEBACKWARD" 1
 	fps 25
-	X
+	{ event 1100 13 "ragdoll" }
+	walkframe 300 LX
 }
-$sequence "dieforward" {
-	"massn_anims\dieforward"
-	ACT_DIEFORWARD 1
-	{ event 11 3 }
-	{ event 2001 10 }
+
+$Sequence "dieheadshot" {
+	"dieheadshot.smd"
+	activity "ACT_DIE_HEADSHOT" 1
+	fps 30
+	{ event 1100 13 "ragdoll" }
+	walkframe 300 LX
+}
+
+$Sequence "diegutshot" {
+	"diegutshot.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fps 30
+	{ event 1100 36 "ragdoll" }
+	walkframe 300 LX
+}
+
+$Sequence "diesimple" {
+	"diesimple.smd"
+	activity "ACT_DIESIMPLE" 1
+	fps 15
+	{ event 1100 5 "ragdoll" }
+	walkframe 300 LX
+}
+
+$Sequence "diebackwards" {
+	"diebackwards.smd"
+	activity "ACT_DIEBACKWARD" 1
+	fps 30
+	{ event 1100 7 "ragdoll" }
+	walkframe 300 LX
+}
+
+$Sequence "dieforward" {
+	"dieforward.smd"
+	activity "ACT_DIEFORWARD" 1
 	fps 26
-	X
+	{ event 1100 5 "ragdoll" }
+	walkframe 300 LX
 }
-$sequence "diesimple" {
-	"massn_anims\diesimple"
-	ACT_DIESIMPLE 1
-	{ event 11 3 }
-	{ event 2001 10 }
-	fps 15
-	X
-}
-$sequence "diebackwards" {
-	"massn_anims\diebackwards"
-	ACT_DIEBACKWARD 1
-	{ event 11 6 }
-	{ event 2001 12 }
-	fps 30
-	X
-}
-$sequence "dieheadshot" {
-	"massn_anims\dieheadshot"
-	ACT_DIE_HEADSHOT 1
-	{ event 11 1 }
-	{ event 2001 20 }
-	fps 30
-	X
-}
-$sequence "diegutshot" {
-	"massn_anims\diegutshot"
-	ACT_DIE_GUTSHOT 1
-	{ event 11 0 }
-	{ event 2001 29 }
-	fps 30
-	X
-}
-$sequence "barnacled1" {
-	"massn_anims\barnacled1"
-	ACT_BARNACLE_HIT 1
-	fps 18
-}
-$sequence "barnacled2" {
-	"massn_anims\barnacled2"
-	ACT_BARNACLE_PULL 1
-	fps 30
-	loop
-}
-$sequence "barnacled3" {
-	"massn_anims\barnacled3"
-	ACT_BARNACLE_CHOMP 1
-	fps 18
-}
-$sequence "barnacled4" {
-	"massn_anims\barnacled4"
-	ACT_BARNACLE_CHEW 1
-	fps 15
-	loop
-}
-$sequence "dead_on_stomach" {
-	"massn_anims\dead_on_stomach"
-	fps 1
-}
-$sequence "deadstomach" {
-	"massn_anims\deadstomach"
-	fps 1
-}
-$sequence "deadside" {
-	"massn_anims\deadside"
-	fps 1
-}
-$sequence "deadsitting" {
-	"massn_anims\deadsitting"
-	fps 1
-}
-$sequence "repel_jump" {
-	"massn_anims\repel_jump"
-	ACT_HOVER 1
-	fps 22
-}
-$sequence "repel_repel" {
-	"massn_anims\repel_repel"
-	ACT_GLIDE 1
-	fps 18
-	loop
-}
-$sequence "repel_shoot" {
-	"massn_anims\repel_shoot_blend01"
-	"massn_anims\repel_shoot_blend02"
-	ACT_FLY 1
-	blend XR -90 45
-	{ event 4 0 }
-	{ event 5 2 }
-	{ event 6 4 }
-	{ event 5001 0 }
-	{ event 5001 2 }
-	{ event 5001 4 }
-	fps 18
-	loop
-}
-$sequence "repel_land" {
-	"massn_anims\repel_land"
-	ACT_LAND 1
-	fps 20
-}
-$sequence "repel_die" {
-	"massn_anims\repel_die"
-	fps 12
-}
-$sequence "working" {
-	"massn_anims\working"
-	fps 30
-	loop
-}
-$sequence "standing" {
-	"massn_anims\standing"
-	fps 20
-	loop
+
+$collisionjoints "hphy.smd"
+{
+	$mass 90
+	$inertia 10
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone "bip01"
+
+
+	$jointconstrain "Bip01 Spine1" x limit -60 60 0.2
+	$jointconstrain "Bip01 Spine1" y limit -25 25 0.2
+	$jointconstrain "Bip01 Spine1" z limit -25 30 0.2
+
+	$jointconstrain "Bip01 R UpperArm" x limit 0 0 0
+	$jointconstrain "Bip01 R UpperArm" y limit -45 64 0.2
+	$jointconstrain "Bip01 R UpperArm" z limit -73 12 0.2
+
+	$jointconstrain "Bip01 L UpperArm" x limit 0 0 0
+	$jointconstrain "Bip01 L UpperArm" y limit -67 30 0.2
+	$jointconstrain "Bip01 L UpperArm" z limit -73 12 0.2
+
+	$jointconstrain "Bip01 L Forearm" x limit 0 0 0
+	$jointconstrain "Bip01 L Forearm" y limit 0 0 0
+	$jointconstrain "Bip01 L Forearm" z limit -120 4 0.2
+
+	$jointconstrain "Bip01 L Hand" x limit -60 60 0.2
+	$jointconstrain "Bip01 L Hand" y limit 0 0 0
+	$jointconstrain "Bip01 L Hand" z limit -57 70 0.2
+
+	$jointconstrain "Bip01 R Forearm" x limit 0 0 0
+	$jointconstrain "Bip01 R Forearm" y limit 0 0 0
+	$jointconstrain "Bip01 R Forearm" z limit -120 4 0.2
+
+	$jointconstrain "Bip01 R Hand" x limit -60 60 0.2
+	$jointconstrain "Bip01 R Hand" y limit 0 0 0
+	$jointconstrain "Bip01 R Hand" z limit -57 70 0.2
+
+	$jointconstrain "Bip01 R Thigh" x limit -25 20 0.2
+	$jointconstrain "Bip01 R Thigh" y limit -40 20 0.2
+	$jointconstrain "Bip01 R Thigh" z limit -37 63 0.2
+
+	$jointconstrain "Bip01 R Calf" x limit 0 0 0
+	$jointconstrain "Bip01 R Calf" y limit 0 0 0
+	$jointconstrain "Bip01 R Calf" z limit -95 4 0.2
+
+	$jointrotdamping "Bip01 Head" 5
+	$jointconstrain "Bip01 Head" x limit -20 20 0.2
+	$jointconstrain "Bip01 Head" y limit -25 25 0.2
+	$jointconstrain "Bip01 Head" z limit -13 30 0.2
+
+	$jointconstrain "Bip01 L Thigh" x limit -25 20 0.2
+	$jointconstrain "Bip01 L Thigh" y limit -20 40 0.2
+	$jointconstrain "Bip01 L Thigh" z limit -37 63 0.2
+
+	$jointconstrain "Bip01 L Calf" x limit 0 0 0
+	$jointconstrain "Bip01 L Calf" y limit 0 0 0
+	$jointconstrain "Bip01 L Calf" z limit -95 4 0.2
+
+	$jointconstrain "Bip01 L Foot" x limit 0 0 0
+	$jointconstrain "Bip01 L Foot" y limit 0 0 0
+	$jointconstrain "Bip01 L Foot" z limit -15 35 0.2
+
+	$jointconstrain "Bip01 R Foot" x limit 0 0 0
+	$jointconstrain "Bip01 R Foot" y limit 0 0 0
+	$jointconstrain "Bip01 R Foot" z limit -15 35 0.2
 }
