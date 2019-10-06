@@ -53,6 +53,7 @@ $collisionjoints "panthereye_physics.smd"
 	$damping 0
 	$rotdamping 0
 	$rootbone "bip01 pelvis"
+	$noselfcollisions
 
 
 	$jointconstrain "Bip01 Spine" x limit -5 5 0
