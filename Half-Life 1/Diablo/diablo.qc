@@ -15,6 +15,8 @@ $texturegroup skinfamilies
 // whole body
 $body studio "diablo_template_model1"
 
+$sequence ragdoll "diablo_template_model1" ACT_DIERAGDOLL 1 fps 15
+
 $sequence subtle_motion "DIABLO_Crouch_Idle(Subtle)1" ACT_IDLE 8 fps 15
 $sequence idle_figit "DIABLO_Crouch_Idle(Twitch)2" ACT_IDLE 3 fps 15
 $sequence get_bug "DIABLO_Idle(Getbug)1" ACT_IDLE 1 fps 15

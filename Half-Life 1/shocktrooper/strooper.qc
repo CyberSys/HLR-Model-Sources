@@ -107,6 +107,14 @@ $Sequence "aim_yaw" {
 }
 
 	// --- --- \\
+	
+
+$sequence "ragdoll" {
+	"strooper_reference.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fps 30
+	loop
+}
 
 $Sequence "walk1" {
 	"walk1.smd"

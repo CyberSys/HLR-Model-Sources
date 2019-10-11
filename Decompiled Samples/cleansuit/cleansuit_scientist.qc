@@ -171,6 +171,7 @@ $sequence "scientist_neckturn" {
 }
 
 // 74 animation sequence(s)
+$sequence "ragdoll" "idle1" LX fps 20 ACT_DIERAGDOLL 1
 $sequence "walk" "walk" LX fps 20 loop ACT_WALK 1 { event 1100 0 "step" } { event 1100 8 "step" } 
 $sequence "walk_scared" "walk_scared" LX fps 20 loop ACT_WALK_SCARED 1 { event 1100 0 "step" } { event 1100 8 "step" } 
 $sequence "run" "run" LX fps 25 loop ACT_RUN 1 { event 1100 0 "step" } { event 1100 9 "step" } 

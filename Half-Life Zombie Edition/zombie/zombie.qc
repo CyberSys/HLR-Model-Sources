@@ -75,7 +75,7 @@ $PoseParameter "move_yaw" -180 180 0
 
 $Sequence "ragdoll" {
 	"scientist_nohead.smd"
-	activity "ACT_DIESIMPLE" 1
+	activity "ACT_DIERAGDOLL" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 15

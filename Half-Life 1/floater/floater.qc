@@ -6,7 +6,7 @@ $surfaceprop "alienflesh"
 // whole body
 $body body "reference" reverse
 
-$sequence ragdoll "ragdoll" ACT_DIESIMPLE 1 loop fps 15
+$sequence ragdoll "ragdoll" ACT_DIERAGDOLL 1 loop fps 15
 $sequence idle1 "idle1" ACT_IDLE 1 loop fps 15
 $sequence walk "idle1" ACT_WALK 1 loop fps 15
 $sequence run "idle1" ACT_RUN 1 loop fps 30

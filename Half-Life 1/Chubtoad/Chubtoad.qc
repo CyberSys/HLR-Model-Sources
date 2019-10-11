@@ -16,7 +16,7 @@ $texturegroup eye
 }
 
 
-$sequence ragdoll "Chub_Template_Biped1" LOOP fps 16 ACT_DIESIMPLE 1
+$sequence ragdoll "Chub_Template_Biped1" LOOP fps 16 ACT_DIERAGDOLL 1
 $sequence idle "Chub_idle(subtle)1" LOOP fps 16 ACT_IDLE 10
 $sequence idle2 "Chub_fidget1(scratch)" fps 16 ACT_IDLE 1
 $sequence idle3 "Chub_fidget2(croak)" fps 16 ACT_IDLE 1

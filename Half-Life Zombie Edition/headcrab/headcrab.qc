@@ -31,6 +31,12 @@ $hbox 0 "Bone02" -0.76 -2.42 -3.06 1.67 0 1.84
 $hbox 0 "Bone03" -0.67 -7.358735 -1.26 1.19 0 1.52
 $hbox 0 "Bone08" -1.11 -5.07 -5.25 1.11 0.71 0.5
 
+$sequence "ragdoll" {
+	"headcrab_ref"
+	ACT_DIERAGDOLL 1
+	fps 20
+	loop
+}
 $sequence "idle1" {
 	"headcrab_anims\idle1"
 	ACT_IDLE 15

@@ -18,7 +18,7 @@ $hbox 0 "Bone07" 0.000000 0.000000 0.000000 15.530000 8.820000 1.700000
 // 1 animation sequence(s)
 $sequence "idle" "idle" fps 20 loop ACT_FLY 1 
 $sequence "glide" "bird_fly1" fps 20 loop ACT_GLIDE 1 
-$sequence "ragdoll" "bird_fly1" fps 20 loop ACT_DIESIMPLE 1 
+$sequence "ragdoll" "bird_fly1" fps 20 loop ACT_DIERAGDOLL 1 
 
 $collisionjoints "phy.smd" {
 

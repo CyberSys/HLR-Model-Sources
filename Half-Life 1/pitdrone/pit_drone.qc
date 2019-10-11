@@ -58,6 +58,12 @@ $hbox 3 "Bip01 Tail" 0.000000 -3.170000 -4.290000 8.540000 5.370000 4.110000
 $hbox 3 "Bip01 Tail1" 0.000000 -3.160000 -2.850000 13.000000 2.680000 2.670000
 
 // 19 animation sequence(s)
+$sequence "ragdoll" {
+	"pit_drone_reference.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fps 30
+	loop
+}
 $sequence "idle_1" "idle_1" fps 30 loop ACT_IDLE 4 
 $sequence "idle_2" "idle_2" fps 30 loop ACT_IDLE 2 
 $sequence "walk" "walk" LX fps 30 loop ACT_WALK 2 { event 1100 0 "step" } { event 1100 26 "step" } 

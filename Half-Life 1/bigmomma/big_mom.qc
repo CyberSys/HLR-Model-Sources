@@ -41,6 +41,12 @@ $HBox 1 "Bone11" 0.000000 0.000000 -8.250000 34.900002 3.900000 8.130000
 $Attachment "mortar" "Bone01" 0 30 0 rotate 0 0 0
 $Attachment "spawn" "Bone05" 0.00 0.00 0.00 rotate -0 0 0
 
+$Sequence "ragdoll" {
+	"reference.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fps 15
+}
+
 $Sequence "idle1" {
 	"idle1.smd"
 	activity "ACT_IDLE" 1

@@ -45,6 +45,12 @@ $hbox 0 "Bone27" -2.380000 -3.233112 0.000000 2.300000 0.300000 3.760000
 $hbox 0 "Bone28" -6.690000 -16.510000 -6.900000 6.500000 0.400000 4.210000
 
 // 13 animation sequence(s)
+$sequence "ragdoll" {
+	"w_shock_rifle_reference.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fps 30
+	loop
+}
 $sequence "idle1" "idle1" fps 20 loop ACT_IDLE 1  
 $sequence "idle2" "idle2" fps 20 ACT_IDLE 1 
 $sequence "idle3" "idle3" fps 30 ACT_IDLE 1 

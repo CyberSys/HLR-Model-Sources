@@ -19,6 +19,13 @@ $eyeposition 0 0 55
 $attachment "clawleft" "MDLDEC_Bone13" 0 0 0 rotate 0 0 0
 $attachment "clawright" "MDLDEC_Bone20" 0 0 0 rotate 0 0 0
 
+$sequence "ragdoll" {
+	"reference.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fps 30
+	loop
+}
+
 $sequence "idle1" {
 	"idle1.smd"
 	activity "ACT_IDLE" 1
