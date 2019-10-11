@@ -12,7 +12,7 @@ $lod 12
 	replacemodel "sentry_lod0.smd" "sentry_lod1.smd"
 }
 
-$lod 28
+$lod 24
 {
 	replacemodel "sentry_lod0.smd" "sentry_lod2.smd"
 }
@@ -182,7 +182,7 @@ $sequence "ragdoll" {
 
 $collisionjoints "sentry_physics.smd"
 {
-	$mass 10
+	$mass 70
 	$inertia 10
 	$damping 0.01
 	$rotdamping 1.5
