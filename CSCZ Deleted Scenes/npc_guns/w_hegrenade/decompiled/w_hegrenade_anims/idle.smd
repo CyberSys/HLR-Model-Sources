@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "flashbang" -1
+end
+skeleton
+  time 0
+    0 0.741156 2.607038 1.362759 -1.342803 -0.289118 -0.320957
+end

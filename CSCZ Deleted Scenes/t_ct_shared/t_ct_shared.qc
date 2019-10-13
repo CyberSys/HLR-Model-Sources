@@ -2,7 +2,7 @@
 
 $modelname "vj_hlr/czeror/t_ct_shared.mdl"
 
-$surfaceprop "default"
+$surfaceprop "flesh"
 
 $contents "solid"
 
@@ -194,18 +194,34 @@ $sequence "LAW_run" {
 	loop
 	LX LY
 }
+$sequence "LAW_walk" {
+	"gign_anims\LAW_run"
+	ACT_WALK_RPG 1
+	{ event 1100 1 "step" }
+	{ event 1100 10 "step" }
+	fps 30
+	loop
+	LX LY
+}
 $sequence "LAW_fire_idle" {
 	"gign_anims\LAW_fire_idle"
 	ACT_IDLE_RPG 1
 	fps 30
 	loop
 }
+$sequence "LAW_combat_idle" {
+	"gign_anims\LAW_fire_idle"
+	ACT_IDLE_ANGRY_RPG 1
+	fps 30
+	loop
+}
 $sequence "LAW_fire" {
 	"gign_anims\LAW_fire_blend01"
 	"gign_anims\LAW_fire_blend02"
-	ACT_RANGE_ATTACK_ML 1
+	ACT_RANGE_ATTACK_RPG 1
+	{ event 1100 2 "fire" }
+	loop
 	blend XR -45 45
-	{ event 1100 10 "fire" }
 	fps 30
 }
 $sequence "sniper_crouch-fire" {
@@ -213,6 +229,7 @@ $sequence "sniper_crouch-fire" {
 	"gign_anims\sniper_crouch-fire_blend02"
 	ACT_RANGE_ATTACK_AR2_LOW 1
 	blend XR -45 45
+	loop
 	{ event 1100 1 "fire" }
 	fps 40
 }
@@ -221,6 +238,7 @@ $sequence "sniper-fire" {
 	"gign_anims\sniper-fire_blend02"
 	ACT_RANGE_ATTACK_AR2 1
 	blend XR -45 45
+	loop
 	{ event 1100 1 "fire" }
 	fps 40
 }
@@ -375,7 +393,7 @@ $sequence "machete_patrol_street" {
 }
 $sequence "crouch_pistol_reload" {
 	"gign_anims\crouch_pistol_reload"
-	ACT_RELOAD_pistol_LOW 1
+	ACT_RELOAD_PISTOL_LOW 1
 	fps 30
 }
 $sequence "crouch_reload_mp5" {
@@ -1312,14 +1330,17 @@ $sequence "run02-charge" {
 $sequence "run03-panic" {
 	"gign_anims\run03-panic"
 	fps 30
+	LX LY
 }
 $sequence "run04-jog" {
 	"gign_anims\run04-jog"
 	fps 30
+	LX LY
 }
 $sequence "running_cower" {
 	"gign_anims\running_cower"
 	fps 30
+	LX LY
 }
 $sequence "patrol_rooftop" {
 	"gign_anims\patrol_rooftop"
@@ -1828,6 +1849,7 @@ $sequence "run_real" {
 	"gign_anims\run_real"
 	fps 30
 	loop
+	LX LY
 }
 $sequence "Turn_corner02_R" {
 	"gign_anims\Turn_corner02_R"
@@ -2555,4 +2577,73 @@ $sequence "speech_brecon" {
 	"gign_anims\speech_brecon"
 	fps 15
 	loop
+}
+
+$sequence "ragdoll" "hphy" fps 15 ACT_DIERAGDOLL 1 
+
+$collisionjoints "hphy.smd"
+{
+	$mass 110
+	$inertia 10
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone "bip01"
+
+
+	$jointconstrain "Bip01 Spine1" x limit -60 60 0.2
+	$jointconstrain "Bip01 Spine1" y limit -25 25 0.2
+	$jointconstrain "Bip01 Spine1" z limit -25 30 0.2
+
+	$jointconstrain "Bip01 R UpperArm" x limit 0 0 0
+	$jointconstrain "Bip01 R UpperArm" y limit -45 64 0.2
+	$jointconstrain "Bip01 R UpperArm" z limit -73 12 0.2
+
+	$jointconstrain "Bip01 L UpperArm" x limit 0 0 0
+	$jointconstrain "Bip01 L UpperArm" y limit -67 30 0.2
+	$jointconstrain "Bip01 L UpperArm" z limit -73 12 0.2
+
+	$jointconstrain "Bip01 L Forearm" x limit 0 0 0
+	$jointconstrain "Bip01 L Forearm" y limit 0 0 0
+	$jointconstrain "Bip01 L Forearm" z limit -120 4 0.2
+
+	$jointconstrain "Bip01 L Hand" x limit -60 60 0.2
+	$jointconstrain "Bip01 L Hand" y limit 0 0 0
+	$jointconstrain "Bip01 L Hand" z limit -57 70 0.2
+
+	$jointconstrain "Bip01 R Forearm" x limit 0 0 0
+	$jointconstrain "Bip01 R Forearm" y limit 0 0 0
+	$jointconstrain "Bip01 R Forearm" z limit -120 4 0.2
+
+	$jointconstrain "Bip01 R Hand" x limit -60 60 0.2
+	$jointconstrain "Bip01 R Hand" y limit 0 0 0
+	$jointconstrain "Bip01 R Hand" z limit -57 70 0.2
+
+	$jointconstrain "Bip01 R Thigh" x limit -25 20 0.2
+	$jointconstrain "Bip01 R Thigh" y limit -40 20 0.2
+	$jointconstrain "Bip01 R Thigh" z limit -37 63 0.2
+
+	$jointconstrain "Bip01 R Calf" x limit 0 0 0
+	$jointconstrain "Bip01 R Calf" y limit 0 0 0
+	$jointconstrain "Bip01 R Calf" z limit -95 4 0.2
+
+	$jointrotdamping "Bip01 Head" 5
+	$jointconstrain "Bip01 Head" x limit -20 20 0.2
+	$jointconstrain "Bip01 Head" y limit -25 25 0.2
+	$jointconstrain "Bip01 Head" z limit -13 30 0.2
+
+	$jointconstrain "Bip01 L Thigh" x limit -25 20 0.2
+	$jointconstrain "Bip01 L Thigh" y limit -20 40 0.2
+	$jointconstrain "Bip01 L Thigh" z limit -37 63 0.2
+
+	$jointconstrain "Bip01 L Calf" x limit 0 0 0
+	$jointconstrain "Bip01 L Calf" y limit 0 0 0
+	$jointconstrain "Bip01 L Calf" z limit -95 4 0.2
+
+	$jointconstrain "Bip01 L Foot" x limit 0 0 0
+	$jointconstrain "Bip01 L Foot" y limit 0 0 0
+	$jointconstrain "Bip01 L Foot" z limit -15 35 0.2
+
+	$jointconstrain "Bip01 R Foot" x limit 0 0 0
+	$jointconstrain "Bip01 R Foot" y limit 0 0 0
+	$jointconstrain "Bip01 R Foot" z limit -15 35 0.2
 }

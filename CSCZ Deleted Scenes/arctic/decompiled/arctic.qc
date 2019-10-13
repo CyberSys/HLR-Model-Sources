@@ -78,8 +78,6 @@ $hbox 5 "Bip01 R Hand" -0.132201 -1.90302 -1.23853 1.8629 1.07824 1.36979
 $controller 0 "Bip01 Head" XR -70 70
 //$controller Mouth "Bone01" ZR 0 20
 
-$sequence "ragdoll" "arctic" fps 15 ACT_DIERAGDOLL 1 
-
 $collisionjoints "hphy.smd"
 {
 	$mass 110
