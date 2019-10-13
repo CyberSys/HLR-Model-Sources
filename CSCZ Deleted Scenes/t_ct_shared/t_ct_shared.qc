@@ -2581,69 +2581,68 @@ $sequence "speech_brecon" {
 
 $sequence "ragdoll" "hphy" fps 15 ACT_DIERAGDOLL 1 
 
-$collisionjoints "hphy.smd"
-{
-	$mass 110
-	$inertia 10
+$collisionjoints hphy {
+
+	$mass 110.0
+	$inertia 10.00
 	$damping 0.01
-	$rotdamping 1.5
+	$rotdamping 1.50
 	$rootbone "bip01"
 
+	$jointconstrain "bip01 spine1" x limit -60.00 60.00 0.00
+	$jointconstrain "bip01 spine1" y limit -25.00 25.00 0.20
+	$jointconstrain "bip01 spine1" z limit -25.00 30.00 0.20
 
-	$jointconstrain "Bip01 Spine1" x limit -60 60 0.2
-	$jointconstrain "Bip01 Spine1" y limit -25 25 0.2
-	$jointconstrain "Bip01 Spine1" z limit -25 30 0.2
+	$jointconstrain "bip01 r upperarm" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r upperarm" y limit -84.00 66.00 0.00
+	$jointconstrain "bip01 r upperarm" z limit -73.00 12.00 0.00
 
-	$jointconstrain "Bip01 R UpperArm" x limit 0 0 0
-	$jointconstrain "Bip01 R UpperArm" y limit -45 64 0.2
-	$jointconstrain "Bip01 R UpperArm" z limit -73 12 0.2
+	$jointconstrain "bip01 l upperarm" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l upperarm" y limit -66.00 84.00 0.00
+	$jointconstrain "bip01 l upperarm" z limit -73.00 12.00 0.20
 
-	$jointconstrain "Bip01 L UpperArm" x limit 0 0 0
-	$jointconstrain "Bip01 L UpperArm" y limit -67 30 0.2
-	$jointconstrain "Bip01 L UpperArm" z limit -73 12 0.2
+	$jointconstrain "bip01 l forearm" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l forearm" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l forearm" z limit -120.00 4.00 0.20
 
-	$jointconstrain "Bip01 L Forearm" x limit 0 0 0
-	$jointconstrain "Bip01 L Forearm" y limit 0 0 0
-	$jointconstrain "Bip01 L Forearm" z limit -120 4 0.2
+	$jointconstrain "bip01 l hand" x limit -60.00 60.00 0.20
+	$jointconstrain "bip01 l hand" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l hand" z limit -57.00 70.00 0.20
 
-	$jointconstrain "Bip01 L Hand" x limit -60 60 0.2
-	$jointconstrain "Bip01 L Hand" y limit 0 0 0
-	$jointconstrain "Bip01 L Hand" z limit -57 70 0.2
+	$jointconstrain "bip01 r forearm" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r forearm" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r forearm" z limit -120.00 4.00 0.20
 
-	$jointconstrain "Bip01 R Forearm" x limit 0 0 0
-	$jointconstrain "Bip01 R Forearm" y limit 0 0 0
-	$jointconstrain "Bip01 R Forearm" z limit -120 4 0.2
+	$jointconstrain "bip01 r hand" x limit -60.00 60.00 0.20
+	$jointconstrain "bip01 r hand" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r hand" z limit -57.00 70.00 0.00
 
-	$jointconstrain "Bip01 R Hand" x limit -60 60 0.2
-	$jointconstrain "Bip01 R Hand" y limit 0 0 0
-	$jointconstrain "Bip01 R Hand" z limit -57 70 0.2
+	$jointconstrain "bip01 r thigh" x limit -25.00 20.00 0.20
+	$jointconstrain "bip01 r thigh" y limit -40.00 20.00 0.00
+	$jointconstrain "bip01 r thigh" z limit -37.00 82.00 0.00
 
-	$jointconstrain "Bip01 R Thigh" x limit -25 20 0.2
-	$jointconstrain "Bip01 R Thigh" y limit -40 20 0.2
-	$jointconstrain "Bip01 R Thigh" z limit -37 63 0.2
+	$jointconstrain "bip01 r calf" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r calf" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r calf" z limit -95.00 4.00 0.00
 
-	$jointconstrain "Bip01 R Calf" x limit 0 0 0
-	$jointconstrain "Bip01 R Calf" y limit 0 0 0
-	$jointconstrain "Bip01 R Calf" z limit -95 4 0.2
+	$jointrotdamping "bip01 head" 5.00
+	$jointconstrain "bip01 head" x limit -20.00 20.00 0.20
+	$jointconstrain "bip01 head" y limit -25.00 25.00 0.20
+	$jointconstrain "bip01 head" z limit -13.00 30.00 0.00
 
-	$jointrotdamping "Bip01 Head" 5
-	$jointconstrain "Bip01 Head" x limit -20 20 0.2
-	$jointconstrain "Bip01 Head" y limit -25 25 0.2
-	$jointconstrain "Bip01 Head" z limit -13 30 0.2
+	$jointconstrain "bip01 l thigh" x limit -25.00 20.00 0.20
+	$jointconstrain "bip01 l thigh" y limit -20.00 40.00 0.20
+	$jointconstrain "bip01 l thigh" z limit -37.00 82.00 0.00
 
-	$jointconstrain "Bip01 L Thigh" x limit -25 20 0.2
-	$jointconstrain "Bip01 L Thigh" y limit -20 40 0.2
-	$jointconstrain "Bip01 L Thigh" z limit -37 63 0.2
+	$jointconstrain "bip01 l calf" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l calf" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l calf" z limit -95.00 4.00 0.20
 
-	$jointconstrain "Bip01 L Calf" x limit 0 0 0
-	$jointconstrain "Bip01 L Calf" y limit 0 0 0
-	$jointconstrain "Bip01 L Calf" z limit -95 4 0.2
+	$jointconstrain "bip01 l foot" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l foot" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l foot" z limit -15.00 35.00 0.20
 
-	$jointconstrain "Bip01 L Foot" x limit 0 0 0
-	$jointconstrain "Bip01 L Foot" y limit 0 0 0
-	$jointconstrain "Bip01 L Foot" z limit -15 35 0.2
-
-	$jointconstrain "Bip01 R Foot" x limit 0 0 0
-	$jointconstrain "Bip01 R Foot" y limit 0 0 0
-	$jointconstrain "Bip01 R Foot" z limit -15 35 0.2
+	$jointconstrain "bip01 r foot" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r foot" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r foot" z limit -15.00 35.00 0.20
 }
