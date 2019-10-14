@@ -10,9 +10,9 @@ $bodygroup "studio"
 
 $eyeposition 0 0 60
 
-$attachment 0 "Bip01 Head" 4 7 0
-$attachment 1 "Bip01 R Arm2" 21 2 0
-$attachment 2 "Bip01 L Arm2" 21 2 0
+$attachment "eyes" "Bip01 Head" 4 7 0
+$attachment "rightarm" "Bip01 R Arm2" 21 2 0
+$attachment "leftarm" "Bip01 L Arm2" 21 2 0
 
 $cbox 0 0 0 0 0 0
 
@@ -66,7 +66,7 @@ $sequence "shootflames1" {
 }
 $sequence "shootflames2" {
 	"babygarg_anims\shootflames2"
-	ACT_MELEE_ATTACK2 1
+	ACT_RANGE_ATTACK1 1
 	fps 8
 	loop
 }
@@ -78,7 +78,7 @@ $sequence "Attack" {
 }
 $sequence "stomp" {
 	"babygarg_anims\stomp"
-	ACT_RANGE_ATTACK1 1
+	ACT_RANGE_ATTACK2 1
 	{ event 1100 19 "range2" } 
 	fps 14
 }
@@ -115,6 +115,7 @@ $sequence "bitehead" {
 $sequence "smash" {
 	"babygarg_anims\smash"
 	fps 16
+	{ event 1100 8 "melee" } 
 }
 $sequence "rollcar" {
 	"babygarg_anims\rollcar"
@@ -127,7 +128,7 @@ $sequence "kickcar" {
 	"babygarg_anims\kickcar"
 	ACT_MELEE_ATTACK1 1
 	{ event 7 9 }
-  { event 1100 9 "kick" } 
+  { event 1100 9 "melee" } 
   { event 1100 9 "stomp" } 
   { event 1100 13 "roar1" } 
 	fps 22
