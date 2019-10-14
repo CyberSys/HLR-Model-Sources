@@ -34,11 +34,12 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	loop
 }
 
 $sequence "open_door" {
 	"apc_body_dooropen.smd"
-	ACT_DEPLOY 1
+	ACT_SPECIAL_ATTACK1 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -46,15 +47,16 @@ $sequence "open_door" {
 
 $sequence "open_door_idle" {
 	"apc_body_dooridle.smd"
-	ACT_IDLE_ANGRY 1
+	ACT_IDLE_RELAXED 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	loop
 }
 
 $sequence "close_door" {
 	"apc_body_doorclose.smd"
-	ACT_IDLE 1
+	ACT_SPECIAL_ATTACK2 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
