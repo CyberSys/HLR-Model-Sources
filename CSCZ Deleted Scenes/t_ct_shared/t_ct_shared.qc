@@ -218,7 +218,7 @@ $sequence "LAW_combat_idle" {
 $sequence "LAW_fire" {
 	"gign_anims\LAW_fire_blend01"
 	"gign_anims\LAW_fire_blend02"
-	ACT_RANGE_ATTACK_RPG 1
+	ACT_RANGE_ATTACK2 1
 	{ event 1100 2 "fire" }
 	loop
 	blend XR -45 45
@@ -570,7 +570,7 @@ $sequence "pistol_popout_right02" {
 $sequence "machinegun_fire" {
 	"gign_anims\machinegun_fire_blend01"
 	"gign_anims\machinegun_fire_blend02"
-	ACT_RANGE_ATTACK_HMG1 1
+	ACT_GESTURE_RANGE_ATTACK_HMG1 1
 	blend XR -45 45
 	{ event 1100 1 "fire" }
 	{ event 1100 4 "fire" }
