@@ -290,6 +290,7 @@ $Sequence "crouching_shotgun" {
 	blend "XR" -45 45
 	activity "ACT_RANGE_ATTACK_SHOTGUN_LOW" 1
 	fps 20
+	loop
 	{ event 1100 0 "event_rattack shotgun_fire" }
 }
 

@@ -225,8 +225,8 @@ $sequence "LAW_fire" {
 	fps 30
 }
 $sequence "sniper_crouch-fire" {
-	"gign_anims\sniper_crouch-fire_blend01"
-	"gign_anims\sniper_crouch-fire_blend02"
+	"gign_anims\fix\sniper_crouch-fire_blend01"
+	"gign_anims\fix\sniper_crouch-fire_blend02"
 	ACT_RANGE_ATTACK_AR2_LOW 1
 	blend XR -45 45
 	loop
@@ -234,8 +234,8 @@ $sequence "sniper_crouch-fire" {
 	fps 40
 }
 $sequence "sniper-fire" {
-	"gign_anims\sniper-fire_blend01"
-	"gign_anims\sniper-fire_blend02"
+	"gign_anims\fix\sniper-fire_blend01"
+	"gign_anims\fix\sniper-fire_blend02"
 	ACT_RANGE_ATTACK_AR2 1
 	blend XR -45 45
 	loop
