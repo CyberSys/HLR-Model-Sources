@@ -1,6 +1,6 @@
 // Created by Crowbar 0.58
 
-$modelname "combine_soldier.mdl"
+$modelname "vj_hlr/hl2b/combine_soldier.mdl"
 
 $bodygroup "Soldier"
 {
@@ -136,7 +136,7 @@ $eyeposition 0 0 73
 
 $opaque
 
-$cdmaterials "models\combine_soldier\"
+$cdmaterials "models\hl_resurgence\hl2b\combine_soldier\"
 
 $cbox 0 0 0 0 0 0
 
@@ -206,15 +206,15 @@ $definebone "ValveBiped.Bip01_R_Finger01" "ValveBiped.Bip01_R_Finger0" 1.789784 
 $definebone "ValveBiped.Bip01_R_Finger02" "ValveBiped.Bip01_R_Finger01" 1.206998 0 0 -0.551071 20.792925 -0.000001 0 0 0 0 0 0
 $definebone "ValveBiped.Cod" "ValveBiped.Bip01_Pelvis" -0.044717 2.313936 4.661499 0 0 -2.250005 0 0 0 0 0 0
 
+$attachment "lefthand" "ValveBiped.Bip01_L_Hand" 0 0 0 rotate 0 0 0
+$attachment "righthand" "ValveBiped.Bip01_R_Hand" 0 0 0 rotate 0 0 0
+$attachment "zipline" "ValveBiped.Bip01_Spine4" 3 -4 0 rotate 0 0 0
+$attachment "eyes" "ValveBiped.Bip01_Head1" 4.5 -5 0 rotate 0 -90 -90
+$attachment "beam_damage" "ValveBiped.Bip01_Spine2" 0 0 0 rotate 0 0 0
 
 $poseparameter "move_yaw" -180 180 loop 360
 $poseparameter "aim_pitch" -90 90 loop 360
 $poseparameter "aim_yaw" -90 90 loop 360
-
-$ikchain "rhand" "ValveBiped.Bip01_R_Hand" knee 0 0 0
-$ikchain "lhand" "ValveBiped.Bip01_L_Hand" knee 0 0 0
-$ikchain "rfoot" "ValveBiped.Bip01_R_Foot" knee 0 0 0
-$ikchain "lfoot" "ValveBiped.Bip01_L_Foot" knee 0 0 0
 
 $weightlist "weights_aim_run_all_delta" {
 	 "ValveBiped.Bip01_Pelvis" 1
@@ -795,7 +795,7 @@ $sequence "reload" {
 $sequence "kick" {
 	"combine_soldier_anims\kick.smd"
 	activity "ACT_MELEE_ATTACK1" 1
-	{ event 3 15 "" }
+	{ event 1100 15 "melee" }
 	fadein 0.2
 	fadeout 0.2
 	fps 36
@@ -823,7 +823,7 @@ $sequence "shootSMG1c" {
 
 $sequence "shootAR2s" {
 	"combine_soldier_anims\shootAR2s.smd"
-	activity "ACT_COMBINE_STANDING_AR2" 1
+	activity "ACT_RANGE_ATTACK1" 1
 	{ event 4 0 "" }
 	fadein 0.2
 	fadeout 0.2
@@ -833,7 +833,7 @@ $sequence "shootAR2s" {
 
 $sequence "shootAR2c" {
 	"combine_soldier_anims\shootAR2c.smd"
-	activity "ACT_COMBINE_CROUCHING_AR2" 1
+	activity "ACT_RANGE_ATTACK1_LOW" 1
 	{ event 4 0 "" }
 	fadein 0.2
 	fadeout 0.2
@@ -1144,8 +1144,8 @@ $sequence "aim_run_all_delta" {
 	delta
 	fadein 0.2
 	fadeout 0.2
-	iklock "lfoot" 1 1
-	iklock "rfoot" 1 1
+	
+	
 	fps 30
 	weightlist "weights_aim_run_all_delta"
 }
@@ -1178,7 +1178,7 @@ $sequence "RunALL" {
 	"a_RunW"
 	"a_RunSW"
 	"a_RunS"
-	activity "ACT_RUN_RIFLE" 1
+	activity "ACT_RUN" 1
 	blend "move_yaw" -180 180
 	blendwidth 9
 	fadein 0.2
@@ -1198,7 +1198,7 @@ $sequence "RunAIMALL1" {
 	"a_RunW"
 	"a_RunSW"
 	"a_RunS"
-	activity "ACT_RUN_AIM_RIFLE" 1
+	activity "ACT_RUN_AIM" 1
 	blend "move_yaw" -180 180
 	blendwidth 9
 	fadein 0.2
@@ -1220,7 +1220,7 @@ $sequence "Walk_all" {
 	"a_WalkW"
 	"a_WalkSW"
 	"a_WalkS"
-	activity "ACT_WALK_RIFLE" 1
+	activity "ACT_WALK" 1
 	blend "move_yaw" -180 180
 	blendwidth 9
 	fadein 0.2
@@ -1245,8 +1245,8 @@ $sequence "aim_walk_all_delta" {
 	delta
 	fadein 0.2
 	fadeout 0.2
-	iklock "lfoot" 1 1
-	iklock "rfoot" 1 1
+	
+	
 	fps 30
 	weightlist "weights_aim_run_all_delta"
 }
@@ -1261,7 +1261,7 @@ $sequence "Walk_aiming_all" {
 	"a_WalkW"
 	"a_WalkSW"
 	"a_WalkS"
-	activity "ACT_WALK_AIM_RIFLE" 1
+	activity "ACT_WALK_AIM" 1
 	blend "move_yaw" -180 180
 	blendwidth 9
 	fadein 0.2
@@ -1486,71 +1486,108 @@ $sequence "ragdoll" {
 	fps 30
 }
 
-$collisionmodel "combine_soldier_physics.smd"
+$collisionjoints "combine_soldier_prisonguard_physics.smd"
 {
-	$mass 115
-	$inertia 10
+	$mass 0
+	$inertia 8
 	$damping 0.01
-	$rotdamping 1.5
-	$rootbone "valvebiped.bip01_pelvis"
+	$rotdamping 0.4
 
-	$jointconstrain "ValveBiped.Bip01_Pelvis" x limit 0 0 0
-	$jointconstrain "ValveBiped.Bip01_Pelvis" y limit 0 0 0
-	$jointconstrain "ValveBiped.Bip01_Pelvis" z limit 0 0 0
 
-	$jointconstrain "ValveBiped.Bip01_Spine2" x limit -48 48 1
-	$jointconstrain "ValveBiped.Bip01_Spine2" y limit -25 25 1
-	$jointconstrain "ValveBiped.Bip01_Spine2" z limit -25 50 1
+	$jointconstrain "ValveBiped.Bip01_Spine2" x limit -48 48 0.2
+	$jointconstrain "ValveBiped.Bip01_Spine2" y limit -25 25 0.2
+	$jointconstrain "ValveBiped.Bip01_Spine2" z limit -25 50 0.2
 
-	$jointconstrain "ValveBiped.Bip01_R_UpperArm" x limit -120 120 1
-	$jointconstrain "ValveBiped.Bip01_R_UpperArm" y limit -57 102 1
-	$jointconstrain "ValveBiped.Bip01_R_UpperArm" z limit -93 30 1
+	$jointconstrain "ValveBiped.Bip01_R_UpperArm" x limit -50 57 0.2
+	$jointconstrain "ValveBiped.Bip01_R_UpperArm" y limit -19 102 0.2
+	$jointconstrain "ValveBiped.Bip01_R_UpperArm" z limit -93 30 0.2
 
-	$jointconstrain "ValveBiped.Bip01_L_UpperArm" x limit -120 120 1
-	$jointconstrain "ValveBiped.Bip01_L_UpperArm" y limit -102 57 1
-	$jointconstrain "ValveBiped.Bip01_L_UpperArm" z limit -93 30 1
+	$jointconstrain "ValveBiped.Bip01_L_UpperArm" x limit -50 57 0.2
+	$jointconstrain "ValveBiped.Bip01_L_UpperArm" y limit -102 19 0.2
+	$jointconstrain "ValveBiped.Bip01_L_UpperArm" z limit -93 30 0.2
 
+	$jointmassbias "ValveBiped.Bip01_L_Forearm" 2
 	$jointconstrain "ValveBiped.Bip01_L_Forearm" x limit 0 0 0
 	$jointconstrain "ValveBiped.Bip01_L_Forearm" y limit 0 0 0
-	$jointconstrain "ValveBiped.Bip01_L_Forearm" z limit -120 4 1
+	$jointconstrain "ValveBiped.Bip01_L_Forearm" z limit -120 4 0.2
 
-	$jointconstrain "ValveBiped.Bip01_L_Hand" x limit -120 120 1
-	$jointconstrain "ValveBiped.Bip01_L_Hand" y limit 0 0 1
-	$jointconstrain "ValveBiped.Bip01_L_Hand" z limit -57 70 1
+	$jointmassbias "ValveBiped.Bip01_L_Hand" 4
+	$jointconstrain "ValveBiped.Bip01_L_Hand" x limit -120 120 0.2
+	$jointconstrain "ValveBiped.Bip01_L_Hand" y limit 0 0 0.2
+	$jointconstrain "ValveBiped.Bip01_L_Hand" z limit -57 70 0.2
 
-	$jointconstrain "ValveBiped.Bip01_R_Forearm" x limit 0 0 1
-	$jointconstrain "ValveBiped.Bip01_R_Forearm" y limit 0 0 1
-	$jointconstrain "ValveBiped.Bip01_R_Forearm" z limit -120 4 1
+	$jointmassbias "ValveBiped.Bip01_R_Forearm" 2
+	$jointconstrain "ValveBiped.Bip01_R_Forearm" x limit 0 0 0.2
+	$jointconstrain "ValveBiped.Bip01_R_Forearm" y limit 0 0 0.2
+	$jointconstrain "ValveBiped.Bip01_R_Forearm" z limit -120 4 0.2
 
-	$jointconstrain "ValveBiped.Bip01_R_Hand" x limit -120 120 1
+	$jointmassbias "ValveBiped.Bip01_R_Hand" 4
+	$jointconstrain "ValveBiped.Bip01_R_Hand" x limit -120 120 0.2
 	$jointconstrain "ValveBiped.Bip01_R_Hand" y limit 0 0 0
-	$jointconstrain "ValveBiped.Bip01_R_Hand" z limit -57 70 1
+	$jointconstrain "ValveBiped.Bip01_R_Hand" z limit -57 70 0.2
 
-	$jointconstrain "ValveBiped.Bip01_R_Thigh" x limit -25 39 1
-	$jointconstrain "ValveBiped.Bip01_R_Thigh" y limit -8 75 1
-	$jointconstrain "ValveBiped.Bip01_R_Thigh" z limit -97 32 1
+	$jointconstrain "ValveBiped.Bip01_R_Thigh" x limit -25 39 0.2
+	$jointconstrain "ValveBiped.Bip01_R_Thigh" y limit -8 75 0.2
+	$jointconstrain "ValveBiped.Bip01_R_Thigh" z limit -97 32 0.2
 
-	$jointconstrain "ValveBiped.Bip01_R_Calf" x limit 0 0 1
-	$jointconstrain "ValveBiped.Bip01_R_Calf" y limit 0 0 1
-	$jointconstrain "ValveBiped.Bip01_R_Calf" z limit -12 126 1
+	$jointmassbias "ValveBiped.Bip01_R_Calf" 2
+	$jointconstrain "ValveBiped.Bip01_R_Calf" x limit 0 0 0.2
+	$jointconstrain "ValveBiped.Bip01_R_Calf" y limit 0 0 0.2
+	$jointconstrain "ValveBiped.Bip01_R_Calf" z limit -12 126 0.2
 
-	$jointconstrain "ValveBiped.Bip01_Head1" x limit -20 20 1
-	$jointconstrain "ValveBiped.Bip01_Head1" y limit -25 25 1
-	$jointconstrain "ValveBiped.Bip01_Head1" z limit -13 30 1
+	$jointmassbias "ValveBiped.Bip01_Head1" 2
+	$jointconstrain "ValveBiped.Bip01_Head1" x limit -20 20 0.2
+	$jointconstrain "ValveBiped.Bip01_Head1" y limit -25 25 0.2
+	$jointconstrain "ValveBiped.Bip01_Head1" z limit -13 30 0.2
 
-	$jointconstrain "ValveBiped.Bip01_L_Thigh" x limit -25 20 1
-	$jointconstrain "ValveBiped.Bip01_L_Thigh" y limit -73 6 1
-	$jointconstrain "ValveBiped.Bip01_L_Thigh" z limit -93 30 1
+	$jointconstrain "ValveBiped.Bip01_L_Thigh" x limit -25 20 0.2
+	$jointconstrain "ValveBiped.Bip01_L_Thigh" y limit -73 6 0.2
+	$jointconstrain "ValveBiped.Bip01_L_Thigh" z limit -93 30 0.2
 
-	$jointconstrain "ValveBiped.Bip01_L_Calf" x limit 0 0 1
-	$jointconstrain "ValveBiped.Bip01_L_Calf" y limit 0 0 1
-	$jointconstrain "ValveBiped.Bip01_L_Calf" z limit -8 126 1
+	$jointmassbias "ValveBiped.Bip01_L_Calf" 2
+	$jointconstrain "ValveBiped.Bip01_L_Calf" x limit 0 0 0.2
+	$jointconstrain "ValveBiped.Bip01_L_Calf" y limit 0 0 0.2
+	$jointconstrain "ValveBiped.Bip01_L_Calf" z limit -8 126 0.2
 
-	$jointconstrain "ValveBiped.Bip01_L_Foot" x limit -1 -1 1
-	$jointconstrain "ValveBiped.Bip01_L_Foot" y limit -19 19 1
-	$jointconstrain "ValveBiped.Bip01_L_Foot" z limit -15 35 1
+	$jointmassbias "ValveBiped.Bip01_L_Foot" 4
+	$jointconstrain "ValveBiped.Bip01_L_Foot" x limit -1 -1 0.2
+	$jointconstrain "ValveBiped.Bip01_L_Foot" y limit -19 19 0.2
+	$jointconstrain "ValveBiped.Bip01_L_Foot" z limit -15 35 0.2
 
+	$jointmassbias "ValveBiped.Bip01_R_Foot" 4
 	$jointconstrain "ValveBiped.Bip01_R_Foot" x limit 0 0 0
-	$jointconstrain "ValveBiped.Bip01_R_Foot" y limit -21 6 1
-	$jointconstrain "ValveBiped.Bip01_R_Foot" z limit -15 35 1
+	$jointconstrain "ValveBiped.Bip01_R_Foot" y limit -21 6 0.2
+	$jointconstrain "ValveBiped.Bip01_R_Foot" z limit -15 35 0.2
+	$jointcollide "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_Thigh"
+	$jointcollide "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_L_Thigh"
+	$jointcollide "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_R_Thigh"
+	$jointcollide "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_L_Thigh"
+	$jointcollide "ValveBiped.Bip01_R_Foot" "ValveBiped.Bip01_L_Calf"
+	$jointcollide "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_R_Calf"
+	$jointcollide "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_R_Foot"
+	$jointcollide "ValveBiped.Bip01_R_Calf" "ValveBiped.Bip01_L_Calf"
+	$jointcollide "ValveBiped.Bip01_R_Thigh" "ValveBiped.Bip01_L_Thigh"
+	$jointcollide "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_Spine2"
+	$jointcollide "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_Spine2"
+	$jointcollide "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_Pelvis"
+	$jointcollide "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_Pelvis"
+}
+
+$collisiontext
+{
+	animatedfriction 
+	{
+		"animfrictionmin"		"1.000000"
+		"animfrictionmax"		"1000.000000"
+		"animfrictiontimein"		"0.800000"
+		"animfrictiontimeout"		"0.500000"
+		"animfrictiontimehold"		"0.000000"
+	}
+	editparams 
+	{
+		"rootname"		"valvebiped.bip01_pelvis"
+		"totalmass"		"115.000000"
+		"jointmerge"		"valvebiped.bip01_pelvis,valvebiped.bip01"
+		"jointmerge"		"valvebiped.bip01_pelvis,valvebiped.bip01_spine1"
+	}
 }
