@@ -133,6 +133,14 @@ $Sequence "run" {
 	{ event 1100 17 "event_emit step" }
 }
 
+$Sequence "apc_run" {
+	"apc_run.smd"
+	activity "ACT_DEPLOY" 1
+	fps 30
+	{ event 1100 9 "event_emit step" }
+	{ event 1100 17 "event_emit step" }
+}
+
 $Sequence "sprint" {
 	"run.smd"
 	activity "ACT_SPRINT" 1

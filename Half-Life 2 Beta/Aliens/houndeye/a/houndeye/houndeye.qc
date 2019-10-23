@@ -1,6 +1,6 @@
 // Created by Crowbar 0.57
 
-$modelname "vj_hlr/hl2b/houndeye.mdl"
+$modelname "houndeye.mdl"
 
 $bodygroup "studio"
 {
@@ -16,7 +16,7 @@ $illumposition 4.116 0.863 22.343
 
 $eyeposition 0 0 27
 
-$cdmaterials "models\hl_resurgence\hl2b\houndeye\"
+$cdmaterials "models\houndeye\\"
 
 $texturegroup "skinfamilies"
 {
@@ -33,6 +33,35 @@ $texturegroup "skinfamilies"
 $cbox 0 0 0 0 0 0
 
 $bbox -31.551 -14.934 -0.839 14.117 14.529 35.591
+
+$hboxset "default"
+$hbox 0 "HoundEye.Body" -4.451 -2.893 -4.08 6.321 6.894 4.08 ""
+$hbox 0 "HoundEye.Spine" -0.427 -3.106 -6.524 9.779 7.177 6.524 ""
+$hbox 0 "HoundEye.Spine1" 0 -4.753 -8.648 7.951 11.803 8.648 ""
+$hbox 0 "HoundEye.Spine2" -0.962 -7.403 -9.573 12.462 12.753 9.559 ""
+$hbox 0 "HoundEye.Spine3" -3.055 -7.653 -11.712 11.381 12.042 11.712 ""
+$hbox 0 "HoundEye.Neck" -6.337 -7.274 -11.712 9.055 11.103 11.712 ""
+$hbox 0 "HoundEye.Head" -5.72 -9.532 -7.786 5.361 9.509 7.702 ""
+$hbox 0 "HoundEye.Eyelid" 0 -7.094 -6.58 5.745 6.337 6.581 ""
+$hbox 0 "eyelid_b" -1.648 -1.331 -3.496 0.053 1.11 3.291 ""
+$hbox 0 "eyelid_l" -2.179 -1.798 -3.974 0.057 0.422 3.569 ""
+$hbox 0 "eyelid_t" -2.447 -0.348 -4.315 0.101 2.576 4.172 ""
+$hbox 0 "eyelid_tr" -2.452 -1.752 -2.644 0.022 1.659 2.128 ""
+$hbox 0 "eyelid_tl" -2.444 -1.554 -2.788 0.062 1.97 1.92 ""
+$hbox 0 "eyelid_bl" -1.668 -2.651 -2.951 0.155 2.048 2.566 ""
+$hbox 0 "eyelid_br" -1.745 -1.522 -2.95 0.134 3.07 2.56 ""
+$hbox 0 "eyelid_r" -0.024 -0.467 -3.47 2.226 1.669 4.024 ""
+$hbox 0 "HoundEye.Hairs" 0 -5.575 -5.749 7.11 9.401 5.738 ""
+$hbox 0 "HoundEye.UpperArmL" -5.401 -6.103 -3.8 15.937 7.958 3.944 ""
+$hbox 0 "HoundEye.ForeArmL" -1.867 -1.334 -1.671 11.746 2.796 1.676 ""
+$hbox 0 "HoundEye.PawL" -0.962 -1.916 -1.926 4.902 1.313 1.721 ""
+$hbox 0 "HoundEye.UpperArmR" -15.934 -7.952 -4.12 5.402 6.224 3.625 ""
+$hbox 0 "HoundEye.ForeArmR" -11.744 -2.775 -1.851 1.869 1.356 1.496 ""
+$hbox 0 "HoundEye.PawR" -4.908 -1.302 -1.896 0.949 1.927 1.75 ""
+$hbox 0 "HoundEye.Thigh" -0.589 -5.176 -4.08 14.477 3.661 4.08 ""
+$hbox 0 "HoundEye.Calf" -1.045 -1.762 -2.235 9.886 1.528 2.235 ""
+$hbox 0 "HoundEye.Foot" -1.036 -1.107 -1.776 5.37 1.028 1.776 ""
+$hbox 0 "HoundEye.Toe" -0.325 -1.663 -1.772 4.833 1.163 1.771 ""
 
 $definebone "HoundEye.Body" "" 28.180824 0 24.303751 -38.480132 -179.999966 -89.999983 0 0 0 0 0 0
 $definebone "HoundEye.Spine" "HoundEye.Body" 5.697758 -0.000004 -0.000001 0 19.730318 0 0 0 0 0 0 0
@@ -223,18 +252,15 @@ $sequence "run" {
 	activity "ACT_RUN" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 33
+	fps 30
 	loop
-	{ event 1100 5 "hunt" }
-	{ event 1100 11 "step" }
-	{ event 1100 12 "step" }
-	{ event 1100 19 "step" }
 }
 
 $sequence "attack" {
 	"a_attack"
 	activity "ACT_RANGE_ATTACK1" 1
-	{ event 1100 59 "sonic" }
+	{ event 2 5 "" }
+	{ event 3 59 "" }
 	fadein 0.2
 	fadeout 0.2
 	fps 25
@@ -246,7 +272,6 @@ $sequence "flinch_small" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	rotate 270
 }
 
 $sequence "flinch_small2" {
@@ -255,7 +280,6 @@ $sequence "flinch_small2" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	rotate 270
 }
 
 $sequence "running_jump" {
@@ -281,9 +305,6 @@ $sequence "walk" {
 	fadeout 0.2
 	fps 30
 	loop
-	{ event 1100 14 "step" }
-	{ event 1100 25 "step" }
-	{ event 1100 36 "step" }
 }
 
 $sequence "leaderlook" {
@@ -294,7 +315,6 @@ $sequence "leaderlook" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	rotate 270
 }
 
 $sequence "sleep" {
@@ -304,7 +324,6 @@ $sequence "sleep" {
 	fadeout 0.2
 	fps 30
 	loop
-	rotate 270
 }
 
 $sequence "gotosleep" {
@@ -313,7 +332,6 @@ $sequence "gotosleep" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	rotate 270
 }
 
 $sequence "sleeptostand" {
@@ -322,7 +340,6 @@ $sequence "sleeptostand" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	rotate 270
 }
 
 $sequence "madidle" {
@@ -332,7 +349,6 @@ $sequence "madidle" {
 	fadeout 0.2
 	fps 30
 	loop
-	rotate 270
 }
 
 $sequence "madidle2" {
@@ -342,7 +358,6 @@ $sequence "madidle2" {
 	fadeout 0.2
 	fps 37
 	loop
-	rotate 270
 }
 
 $sequence "madidle3" {
@@ -352,7 +367,6 @@ $sequence "madidle3" {
 	fadeout 0.2
 	fps 30
 	loop
-	rotate 270
 }
 
 $sequence "inspect" {
@@ -361,7 +375,6 @@ $sequence "inspect" {
 	fadein 0.2
 	fadeout 0.2
 	fps 10
-	rotate 270
 }
 
 $sequence "eat" {
@@ -370,7 +383,6 @@ $sequence "eat" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	rotate 270
 }
 
 $sequence "180l" {
@@ -380,7 +392,6 @@ $sequence "180l" {
 	fadeout 0.2
 	fps 30
 	loop
-	rotate 270
 }
 
 $sequence "180r" {
@@ -390,7 +401,6 @@ $sequence "180r" {
 	fadeout 0.2
 	fps 30
 	loop
-	rotate 270
 }
 
 $sequence "jumpback" {
@@ -400,7 +410,6 @@ $sequence "jumpback" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	rotate 270
 }
 
 $sequence "wakefast" {
@@ -409,7 +418,6 @@ $sequence "wakefast" {
 	fadein 0.2
 	fadeout 0.2
 	fps 60
-	rotate 270
 }
 
 $sequence "whimper" {
@@ -418,7 +426,6 @@ $sequence "whimper" {
 	fadeout 0.2
 	fps 35
 	loop
-	rotate 270
 }
 
 $sequence "ragdoll" {

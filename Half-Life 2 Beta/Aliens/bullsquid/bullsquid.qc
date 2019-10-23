@@ -1,6 +1,6 @@
 // Created by Crowbar 0.57
 
-$modelname "bullsquid.mdl"
+$modelname "vj_hlr/hl2b/bullsquid.mdl"
 
 $bodygroup "studio"
 {
@@ -16,7 +16,7 @@ $illumposition 1.615 5.97 35.995
 
 $eyeposition 0 0 24
 
-$cdmaterials "models\bullsquid\"
+$cdmaterials "models\hl_resurgence\hl2b\bullsquid\"
 
 $texturegroup "skinfamilies"
 {
@@ -37,18 +37,6 @@ $attachment "Mouth" "Bullsquid.Tent_Bone15" 0 0 0 rotate 0 -45 90
 $cbox 0 0 0 0 0 0
 
 $bbox -73.03 -43.584 -1.582 61.091 46.814 73.572
-
-$hboxset "default"
-$hbox 0 "Bullsquid.Body_bone" -14.56 -14.94 -12.4 14.56 8.74 9.45 ""
-$hbox 0 "Bullsquid.Head_Bone" -12.53 -14.1 -18.790001 24.23 10.85 16.940001 ""
-$hbox 0 "Bullsquid.Head_Bone1" -7.3 -11.52 -16.200001 21 11.25 16.620001 ""
-$hbox 0 "Bullsquid.Leg_R1" -11.26 -18.639999 -5.3 25.540001 9.38 10.89 ""
-$hbox 0 "Bullsquid.Tail_Bone" -6.78 -10.1 -14.53 14.19 13.76 13.84 ""
-$hbox 0 "Bullsquid.Tail_Bone1" -11.69 -9.75 -12.12 17.719999 11.57 12.54 ""
-$hbox 0 "Bullsquid.Tail_Bone2" -5.96 -7.96 -9.78 17.799999 5.15 10.2 ""
-$hbox 0 "Bullsquid.Tail_Bone3" -5.74 -6.4 -5.5 17.42 4.2 5.92 ""
-$hbox 0 "Bullsquid.Tail_Bone4" -5.17 -3.67 -3.91 14.18 2.28 4.33 ""
-$hbox 0 "Bullsquid.Leg_L1" -11.31 -9.27 -4.63 25.49 18.139999 11.29 ""
 
 $definebone "Bullsquid.Body_bone" "" 0.15221 4.457566 34.202477 0 0 89.999983 0 0 0 0 0 0
 $definebone "Bullsquid.Head_Bone" "Bullsquid.Body_bone" 0.000241 1.623034 -2.213386 -59.547215 -90.01184 90.013793 0 0 0 0 0 0
@@ -235,94 +223,97 @@ $sequence "ActiveIdle" {
 }
 
 $sequence "walk_all" {
-	"a_walkS"
-	"a_walkSE"
-	"a_walkE"
-	"a_walkNE"
-	"a_walkN"
-	"a_walkNW"
-	"a_walkW"
-	"a_walkSW"
-	"a_walkS"
+	//"a_walkS"
+	//"a_walkSE"
+	//"a_walkE"
+	//"a_walkNE"
+	"bullsquid_anims/a_walk1"
+	//"a_walkNW"
+	//"a_walkW"
+	//"a_walkSW"
+	//"a_walkS"
 	activity "ACT_WALK" 1
-	blend "move_yaw" -180 180
-	blendwidth 9
-	{ event 2051 10 "" }
-	{ event 2050 20 "" }
+	//blend "move_yaw" -180 180
+	//blendwidth 9
+	{ event 1100 10 "step" }
+	{ event 1100 20 "step" }
 	fadein 0.2
 	fadeout 0.2
 	node 1
-	fps 30
+	fps 15
 	loop
+	walkframe 300 LX LY
 }
 
 $sequence "walk2" {
-	"a_walkS"
-	"a_walkSE"
-	"a_walkE"
-	"a_walkNE"
-	"a_walkN"
-	"a_walkNW"
-	"a_walkW"
-	"a_walkSW"
-	"a_walkS"
-	activity "ACT_SQUID_WALK_EXCITED" 1
-	blend "move_yaw" -180 180
-	blendwidth 9
-	{ event 2051 10 "" }
-	{ event 2050 20 "" }
+	//"a_walkS"
+	//"a_walkSE"
+	//"a_walkE"
+	//"a_walkNE"
+	"bullsquid_anims/a_walk1"
+	//"a_walkNW"
+	//"a_walkW"
+	//"a_walkSW"
+	//"a_walkS"
+	activity "ACT_WALK_STIMULATED" 1
+	//blend "move_yaw" -180 180
+	//blendwidth 9
+	{ event 1100 10 "step" }
+	{ event 1100 20 "step" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 	loop
+	walkframe 300 LX LY
 }
 
 $sequence "Run1" {
-	"a_walkS"
-	"a_walkSE"
-	"a_walkE"
-	"a_walkNE"
-	"a_run1N"
-	"a_walkNW"
-	"a_walkW"
-	"a_walkSW"
-	"a_walkS"
+	//"a_walkS"
+	//"a_walkSE"
+	//"a_walkE"
+	//"a_walkNE"
+	"bullsquid_anims/a_run1"
+	//"a_walkNW"
+	//"a_walkW"
+	//"a_walkSW"
+	//"a_walkS"
 	activity "ACT_RUN" 1
-	blend "move_yaw" -180 180
-	blendwidth 9
-	{ event 2051 8 "" }
-	{ event 2050 15 "" }
+	//blend "move_yaw" -180 180
+	//blendwidth 9
+	{ event 1100 8 "step" }
+	{ event 1100 15 "step" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 	loop
+	walkframe 300 LX LY
 }
 
 $sequence "Run2" {
-	"a_walkS"
-	"a_walkSE"
-	"a_walkE"
-	"a_walkNE"
-	"a_run2N"
-	"a_walkNW"
-	"a_walkW"
-	"a_walkSW"
-	"a_walkS"
-	activity "ACT_SQUID_RUN_EXCITED" 1
-	blend "move_yaw" -180 180
-	blendwidth 9
-	{ event 2051 8 "" }
-	{ event 2050 15 "" }
+	//"a_walkS"
+	//"a_walkSE"
+	//"a_walkE"
+	//"a_walkNE"
+	"bullsquid_anims/a_run2"
+	//"a_walkNW"
+	//"a_walkW"
+	//"a_walkSW"
+	//"a_walkS"
+	activity "ACT_RUN_STIMULATED" 1
+	//blend "move_yaw" -180 180
+	//blendwidth 9
+	{ event 1100 8 "step" }
+	{ event 1100 15 "step" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 	loop
+	walkframe 300 LX LY
 }
 
 $sequence "hop" {
 	"a_hop"
 	activity "ACT_HOP" 1
-	{ event 5 0 "" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -331,7 +322,7 @@ $sequence "hop" {
 $sequence "spit" {
 	"a_spit"
 	activity "ACT_RANGE_ATTACK1" 1
-	{ event 1 7 "" }
+	{ event 1100 7 "range" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -340,20 +331,21 @@ $sequence "spit" {
 $sequence "pounce" {
 	"a_pounce"
 	activity "ACT_MELEE_ATTACK1" 1
-	{ event 2 0 "" }
+	{ event 1100 31 "attack" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	walkframe 300 LX LY
 }
 
 $sequence "tailwhip" {
 	"a_tailwhip"
-	activity "ACT_MELEE_ATTACK2" 1
-	{ event 7 2 "" }
-	{ event 6 12 "" }
+	activity "ACT_MELEE_ATTACK1" 1
+	{ event 1100 12 "attack" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	walkframe 300 LX LY
 }
 
 $sequence "eat" {
@@ -404,6 +396,7 @@ $sequence "swim" {
 	fadeout 0.2
 	fps 30
 	loop
+	walkframe 300 LX LY
 }
 
 $sequence "ragdoll" {
@@ -415,56 +408,48 @@ $sequence "ragdoll" {
 }
 
 
-$collisionjoints "bullsquid_physics.smd"
+$collisionjoints "phy.smd"
 {
-	$mass 94
+	$mass 100
 	$inertia 10
 	$damping 0.01
-	$rotdamping 1
-	$rootbone " "
+	$rotdamping 1.5
+	$rootbone "Bullsquid.Body_bone"
 
 
-	$jointconstrain "Bullsquid.Leg_L" x limit 0 0 0
-	$jointconstrain "Bullsquid.Leg_L" y limit 0 0 0
-	$jointconstrain "Bullsquid.Leg_L" z limit 0 0 0
+	$jointconstrain "Bullsquid.Leg_L" x limit -40 20 0.2
+	$jointconstrain "Bullsquid.Leg_L" y limit -35 25 0.2
+	$jointconstrain "Bullsquid.Leg_L" z limit -45 40 0.2
 
-	$jointconstrain "Bullsquid.Leg_L1" x limit 0 0 0
-	$jointconstrain "Bullsquid.Leg_L1" y limit 0 0 0
-	$jointconstrain "Bullsquid.Leg_L1" z limit 0 0 0
+	$jointconstrain "Bullsquid.Leg_L1" x limit -35 35 0.2
+	$jointconstrain "Bullsquid.Leg_L1" y limit -35 35 0.2
+	$jointconstrain "Bullsquid.Leg_L1" z limit -35 35 0.2
 
-	$jointconstrain "Bullsquid.Tail_Bone" x limit 0 0 0
-	$jointconstrain "Bullsquid.Tail_Bone" y limit 0 0 0
-	$jointconstrain "Bullsquid.Tail_Bone" z limit 0 0 0
+	$jointconstrain "Bullsquid.Tail_Bone" x limit -30 30 0.2
+	$jointconstrain "Bullsquid.Tail_Bone" y limit -30 30 0.2
+	$jointconstrain "Bullsquid.Tail_Bone" z limit -40 30 0.2
 
-	$jointconstrain "Bullsquid.Tail_Bone2" x limit 0 0 0
-	$jointconstrain "Bullsquid.Tail_Bone2" y limit 0 0 0
-	$jointconstrain "Bullsquid.Tail_Bone2" z limit 0 0 0
+	$jointconstrain "Bullsquid.Tail_Bone2" x limit -30 30 0.2
+	$jointconstrain "Bullsquid.Tail_Bone2" y limit -45 45 0.2
+	$jointconstrain "Bullsquid.Tail_Bone2" z limit -55 45 0.2
 
-	$jointconstrain "Bullsquid.Tail_Bone3" x limit 0 0 0
-	$jointconstrain "Bullsquid.Tail_Bone3" y limit 0 0 0
-	$jointconstrain "Bullsquid.Tail_Bone3" z limit 0 0 0
+	$jointconstrain "Bullsquid.Leg_R" x limit -20 40 0.2
+	$jointconstrain "Bullsquid.Leg_R" y limit -25 35 0.2
+	$jointconstrain "Bullsquid.Leg_R" z limit -45 40 0.2
 
-	$jointconstrain "Bullsquid.Tail_Bone4" x limit 0 0 0
-	$jointconstrain "Bullsquid.Tail_Bone4" y limit 0 0 0
-	$jointconstrain "Bullsquid.Tail_Bone4" z limit 0 0 0
+	$jointconstrain "Bullsquid.Leg_R1" x limit -35 35 0.2
+	$jointconstrain "Bullsquid.Leg_R1" y limit -35 35 0.2
+	$jointconstrain "Bullsquid.Leg_R1" z limit -35 35 0.2
 
-	$jointconstrain "Bullsquid.Leg_R" x limit 0 0 0
-	$jointconstrain "Bullsquid.Leg_R" y limit 0 0 0
-	$jointconstrain "Bullsquid.Leg_R" z limit 0 0 0
+	$jointconstrain "Bullsquid.Hand_BoneR" x limit -20 20 0.2
+	$jointconstrain "Bullsquid.Hand_BoneR" y limit -30 30 0.2
+	$jointconstrain "Bullsquid.Hand_BoneR" z limit -45 45 0.2
 
-	$jointconstrain "Bullsquid.Leg_R1" x limit 0 0 0
-	$jointconstrain "Bullsquid.Leg_R1" y limit 0 0 0
-	$jointconstrain "Bullsquid.Leg_R1" z limit 0 0 0
+	$jointconstrain "Bullsquid.Head_Bone1" x limit -30 30 0.2
+	$jointconstrain "Bullsquid.Head_Bone1" y limit -15 15 0.2
+	$jointconstrain "Bullsquid.Head_Bone1" z limit -20 20 0.2
 
-	$jointconstrain "Bullsquid.Hand_BoneR" x limit 0 0 0
-	$jointconstrain "Bullsquid.Hand_BoneR" y limit 0 0 0
-	$jointconstrain "Bullsquid.Hand_BoneR" z limit 0 0 0
-
-	$jointconstrain "Bullsquid.Head_Bone1" x limit 0 0 0
-	$jointconstrain "Bullsquid.Head_Bone1" y limit 0 0 0
-	$jointconstrain "Bullsquid.Head_Bone1" z limit 0 0 0
-
-	$jointconstrain "Bullsquid.Hand_BoneL" x limit 0 0 0
-	$jointconstrain "Bullsquid.Hand_BoneL" y limit 0 0 0
-	$jointconstrain "Bullsquid.Hand_BoneL" z limit 0 0 0
+	$jointconstrain "Bullsquid.Hand_BoneL" x limit -20 20 0.2
+	$jointconstrain "Bullsquid.Hand_BoneL" y limit -30 30 0.2
+	$jointconstrain "Bullsquid.Hand_BoneL" z limit -45 45 0.2
 }
