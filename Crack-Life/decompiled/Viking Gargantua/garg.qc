@@ -1,17 +1,15 @@
 // Created by Crowbar 0.58
 
-$modelname "garg.mdl"
-$cd "."
-$cdtexture "."
-$cliptotextures
-$scale 1.0
+$modelname "vj_hlr/cracklife/garg_viking.mdl"
 
 $bodygroup "studio"
 {
 	studio "garg_template_biped1"
 }
 
-$flags 0
+$SurfaceProp "metal"
+$CDMaterials "models/hl_resurgence/hl1/"
+$CDMaterials "models/hl_resurgence/cracklife/"
 
 $eyeposition 0 0 139
 
@@ -73,128 +71,40 @@ $hbox 0 "Bone04" -10.59 -7.48 -1.6 0 0 0
 $controller 0 "Bip01 Spine" XR -60 60
 $controller 1 "Bip01 Spine" ZR -35 35
 
-$sequence "idle3" {
-	"garg_anims\idle3"
-	ACT_IDLE 3
-	{ event 6 8 }
-	fps 10
-	loop
-}
-$sequence "idle2" {
-	"garg_anims\idle2"
-	ACT_IDLE 1
-	{ event 1008 7 "garg/gar_attack1.wav" }
-	fps 10
-	loop
-}
-$sequence "idle1" {
-	"garg_anims\idle1"
-	ACT_IDLE 1
-	fps 15
-	loop
-}
-$sequence "idle4" {
-	"garg_anims\idle4"
-	ACT_IDLE 1
-	fps 10
-	loop
-}
-$sequence "walk" {
-	"garg_anims\walk"
-	ACT_WALK 1
-	{ event 3 1 }
-	{ event 6 7 }
-	{ event 4 18 }
-	fps 20
-	loop
-	LX
-}
-$sequence "run" {
-	"garg_anims\run"
-	ACT_RUN 1
-	{ event 3 9 }
-	{ event 4 19 }
-	fps 18
-	loop
-	LX
-}
-$sequence "Attack" {
-	"garg_anims\Attack"
-	ACT_MELEE_ATTACK1 1
-	{ event 1 28 }
-	fps 36
-}
-$sequence "stomp" {
-	"garg_anims\stomp"
-	ACT_RANGE_ATTACK1 1
-	{ event 5 19 }
-	fps 14
-}
-$sequence "180left" {
-	"garg_anims\180left"
-	ACT_TURN_LEFT 1
-	fps 15
-}
-$sequence "180right" {
-	"garg_anims\180right"
-	ACT_TURN_RIGHT 1
-	fps 15
-}
-$sequence "Flinchlight" {
-	"garg_anims\Flinchlight"
-	ACT_SMALL_FLINCH 1
-	fps 14
-}
-$sequence "Flinchheavy" {
-	"garg_anims\Flinchheavy"
-	ACT_BIG_FLINCH 1
-	fps 14
-}
-$sequence "die" {
-	"garg_anims\die"
-	ACT_DIESIMPLE 1
-	fps 15
-}
-$sequence "bitehead" {
-	"garg_anims\bitehead"
-	fps 16
-	AX AY AZR
-}
-$sequence "throwbody" {
-	"garg_anims\throwbody"
-	fps 16
-	AX AY AZR
-}
-$sequence "smash" {
-	"garg_anims\smash"
-	fps 16
-	AX AY AZR
-}
-$sequence "rollcar" {
-	"garg_anims\rollcar"
-	{ event 1003 19 "roll" }
-	{ event 1003 10 "roar3" }
-	{ event 1003 22 "stomp1" }
-	fps 18
-}
-$sequence "kickcar" {
-	"garg_anims\kickcar"
-	{ event 1003 9 "kick" }
-	{ event 1003 9 "stomp" }
-	{ event 1003 13 "roar1" }
-	fps 22
-}
-$sequence "pushcar" {
-	"garg_anims\pushcar"
-	{ event 1003 10 "push" }
-	{ event 1003 10 "step1" }
-	{ event 1003 24 "step2" }
-	{ event 1003 25 "roar2" }
-	{ event 1003 45 "step1" }
-	fps 22
-}
-$sequence "bust" {
-	"garg_anims\bust"
-	{ event 1003 10 "stomp" }
-	fps 22
-}
+$sequence "idle3" "idle3" fps 10 loop ACT_IDLE 5 { event 6 8 } 
+$sequence "idle2" "idle2" fps 10 loop ACT_IDLE 1 { event 1008 7 "garg/gar_attack1.wav" } 
+$sequence "idle1" "idle1" fps 15 loop ACT_IDLE 1 
+$sequence "idle4" "idle4" fps 10 loop ACT_IDLE 1 
+$sequence "walk" "walk" LX fps 20 loop ACT_WALK 1 {
+  { event 1100 1 "step" } 
+  { event 1100 16 "step" } 
+ }
+$sequence "run" "run" LX fps 18 loop ACT_RUN 1 { event 1100 9 "step" } { event 1100 19 "step" } 
+$sequence "Attack" "Attack" fps 36 ACT_MELEE_ATTACK1 1 { event 1100 28 "melee" } 
+$sequence "stomp" "stomp" fps 14 ACT_RANGE_ATTACK2 1 { event 1100 19 "range2" } 
+$sequence "180left" "180left" fps 15 ACT_TURN_LEFT 1 
+$sequence "180right" "180right" fps 15 ACT_TURN_RIGHT 1 
+$sequence "Flinchlight" "Flinchlight" fps 14 ACT_SMALL_FLINCH 1 
+$sequence "Flinchheavy" "Flinchheavy" fps 14 ACT_BIG_FLINCH 1 
+$sequence "die" "die" fps 15 ACT_DIESIMPLE 1 { event 1100 42 "explode_death" } 
+$sequence "bitehead" "bitehead" fps 16 ACT_BITEHEAD 1 { event 1100 10 "melee" } 
+$sequence "throwbody" "throwbody" fps 16 ACT_THROWBODY 1
+$sequence "smash" "smash" fps 16 ACT_SMASH 1 { event 1100 8 "melee" } 
+$sequence "rollcar" "rollcar" fps 18 ACT_ROLLCAR 1 {
+  { event 1100 19 "roll" } 
+  { event 1100 10 "roar3" } 
+  { event 1100 22 "stomp1" } 
+ }
+$sequence "kickcar" "kickcar" fps 22 ACT_KICKCAR 1 {
+  { event 1100 9 "kick" } 
+  { event 1100 9 "stomp" } 
+  { event 1100 13 "roar1" } 
+ }
+$sequence "pushcar" "pushcar" fps 22 ACT_PUSHCAR 1 {
+  { event 1100 10 "push" } 
+  { event 1100 10 "step1" } 
+  { event 1100 24 "step2" } 
+  { event 1100 25 "roar2" } 
+  { event 1100 45 "step1" } 
+ }
+$sequence "bust" "bust" fps 22 { event 1100 10 "stomp" } 
