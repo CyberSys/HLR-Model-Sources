@@ -26,7 +26,7 @@ $Sequence "idle" {
 
 $CollisionModel "w_hegrenade_w_flashbang.smd"
 {
-	$mass 10
+	$mass 5
 	$inertia 1
 	$damping 0
 	$rotdamping 0

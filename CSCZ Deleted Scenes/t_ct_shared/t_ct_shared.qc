@@ -231,7 +231,7 @@ $sequence "sniper_crouch-fire" {
 	blend XR -45 45
 	loop
 	{ event 1100 1 "fire" }
-	fps 40
+	fps 25
 }
 $sequence "sniper-fire" {
 	"gign_anims\fix\sniper-fire_blend01"
@@ -240,12 +240,12 @@ $sequence "sniper-fire" {
 	blend XR -45 45
 	loop
 	{ event 1100 1 "fire" }
-	fps 40
+	fps 20
 }
 $sequence "sniper_crouch" {
 	"gign_anims\sniper_crouch"
 	ACT_HL2MP_IDLE_CROUCH_AR2 1
-	fps 20
+	fps 10
 	loop
 }
 $sequence "sniper_stand" {
