@@ -18,8 +18,8 @@ $CDMaterials "models\hl_resurgence\opfor\opfor_grunt\"
 
 $CBox 0 0 0 0 0 0
 $BBox -1.924 -2.178 -3.688 1.917 2.172 3.673
-$attachment "muzzle" "ValveBiped.Bip01_R_Hand" 0.30 -33.10 10.82 rotate -6 -90 0
-$attachment "shell" "ValveBiped.Bip01_R_Hand" -4.90 -5.10 1.10 rotate -90 0 0
+$attachment "muzzle" "ValveBiped.Bip01_R_Hand" 0.30 -55.10 17.82 rotate -6 -90 0
+$attachment "shell" "ValveBiped.Bip01_R_Hand" -1.90 -5.10 12.10 rotate -90 -0 0
 
 
 
