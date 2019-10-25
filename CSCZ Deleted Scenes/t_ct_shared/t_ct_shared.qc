@@ -359,13 +359,13 @@ $sequence "machete_victorydance" {
 $sequence "machete_180L" {
 	"gign_anims\machete_180L"
 	fps 30
-	ACT_180_LEFT 1
+	ACT_MACHETE_LEFT 1
 	loop
 }
 $sequence "machete_180R" {
 	"gign_anims\machete_180R"
 	fps 30
-	ACT_180_RIGHT 1
+	ACT_MACHETE_RIGHT 1
 	loop
 }
 $sequence "machete_strafefire_L" {
@@ -637,12 +637,12 @@ $sequence "limpingrun" {
 }
 $sequence "180L" {
 	"gign_anims\180L"
-	ACT_TURN_LEFT 1
+	ACT_180_LEFT 1
 	fps 12
 }
 $sequence "180R" {
 	"gign_anims\180R"
-	ACT_TURN_RIGHT 1
+	ACT_180_RIGHT 1
 	fps 12
 }
 $sequence "strafeleft" {
@@ -2583,10 +2583,10 @@ $sequence "ragdoll" "hphy" fps 15 ACT_DIERAGDOLL 1
 
 $collisionjoints hphy {
 
-	$mass 110.0
-	$inertia 10.00
-	$damping 0.01
-	$rotdamping 1.50
+	$mass 100.0
+	$inertia 1.00
+	$damping 0.00
+	$rotdamping 0.00
 	$rootbone "bip01"
 
 	$jointconstrain "bip01 spine1" x limit -60.00 60.00 0.00
