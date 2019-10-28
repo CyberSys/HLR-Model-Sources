@@ -2584,9 +2584,9 @@ $sequence "ragdoll" "hphy" fps 15 ACT_DIERAGDOLL 1
 $collisionjoints hphy {
 
 	$mass 100.0
-	$inertia 1.00
-	$damping 0.00
-	$rotdamping 0.00
+	$inertia 5.00
+	$damping 0.005
+	$rotdamping 0.75
 	$rootbone "bip01"
 
 	$jointconstrain "bip01 spine1" x limit -60.00 60.00 0.00
