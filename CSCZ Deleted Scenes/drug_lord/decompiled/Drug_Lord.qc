@@ -1,10 +1,9 @@
 // Created by Crowbar 0.58
 
-$modelname "Drug_Lord.mdl"
-$cd "."
-$cdtexture "."
-$cliptotextures
-$scale 1.0
+$modelname "vj_hlr\czeror\drug_lord.mdl"
+$cdmaterials "models/hl_resurgence/czeror/moses/"
+$cdmaterials "models/hl_resurgence/czeror/"
+$surfaceprop "flesh"
 
 $bodygroup "body"
 {
@@ -15,8 +14,6 @@ $bodygroup "weapons"
 	studio "Drug_Lord_m60"
 	blank
 }
-
-$flags 0
 
 $eyeposition 0 0 73
 
@@ -52,9 +49,7 @@ $hbox 5 "Bip01 R Forearm" 0.44 -1.97 -1.34 10.59 1.72 1.22
 $hbox 5 "Bip01 R Hand" -0.132201 -1.90302 -1.23853 1.8629 1.07824 1.36979
 
 $controller 0 "Bip01 Head" XR -70 70
-$controller Mouth "Bone01" ZR 0 20
-
-$sequencegroupsize 996
+//$controller Mouth "Bone01" ZR 0 20
 
 $sequence "idle1" {
 	"Drug_Lord_anims\idle1"
@@ -64,6 +59,7 @@ $sequence "idle1" {
 }
 $sequence "idle02" {
 	"Drug_Lord_anims\idle02"
+	ACT_IDLE 1
 	fps 10
 	loop
 }
@@ -90,52 +86,15 @@ $sequence "combat_idle03" {
 }
 $sequence "crouching_wait" {
 	"Drug_Lord_anims\crouching_wait"
-	ACT_CROUCH 0
+	ACT_CROUCHIDLE 1
 	fps 30
-}
-$sequence "crouching_mp5" {
-	"Drug_Lord_anims\crouching_mp5_blend01"
-	"Drug_Lord_anims\crouching_mp5_blend02"
-	ACT_RANGE_ATTACK1 1
-	blend XR -45 45
-	{ event 4 1 }
-	{ event 5 3 }
-	{ event 6 5 }
-	{ event 5001 1 "50" }
-	{ event 5001 3 "50" }
-	{ event 5001 5 "50" }
-	fps 20
-	loop
 }
 $sequence "standing_mp5" {
 	"Drug_Lord_anims\standing_mp5_blend01"
 	"Drug_Lord_anims\standing_mp5_blend02"
 	blend XR -45 45
-	{ event 4 1 }
-	{ event 5 3 }
-	{ event 6 5 }
-	{ event 5001 1 "50" }
-	{ event 5001 3 "50" }
-	{ event 5001 5 "50" }
-	fps 20
-	loop
-}
-$sequence "crouching_shotgun" {
-	"Drug_Lord_anims\crouching_shotgun_blend01"
-	"Drug_Lord_anims\crouching_shotgun_blend02"
-	ACT_RANGE_ATTACK1 1
-	blend XR -45 45
-	{ event 4 2 }
-	{ event 5001 2 "51" }
-	fps 30
-	loop
-}
-$sequence "standing_shotgun" {
-	"Drug_Lord_anims\standing_shotgun_blend01"
-	"Drug_Lord_anims\standing_shotgun_blend02"
-	blend XR -45 45
-	{ event 4 2 }
-	{ event 5001 2 "51" }
+	ACT_GESTURE_RANGE_ATTACK_HMG1 1
+	{ event 1100 1 "fire" }
 	fps 30
 	loop
 }
@@ -153,7 +112,6 @@ $sequence "walk2" {
 }
 $sequence "run" {
 	"Drug_Lord_anims\run"
-	ACT_RUN 1
 	fps 30
 	loop
 	LX
@@ -178,6 +136,8 @@ $sequence "cower" {
 $sequence "limpingwalk" {
 	"Drug_Lord_anims\limpingwalk"
 	ACT_WALK_HURT 1
+	{ event 1100 0 "step" }
+	{ event 1100 22 "step" }
 	fps 30
 	loop
 	LX
@@ -185,6 +145,8 @@ $sequence "limpingwalk" {
 $sequence "limpingrun" {
 	"Drug_Lord_anims\limpingrun"
 	ACT_RUN_HURT 1
+	{ event 1100 0 "step" }
+	{ event 1100 11 "step" }
 	fps 30
 	loop
 	LX
@@ -246,8 +208,8 @@ $sequence "launchgrenade" {
 }
 $sequence "throwgrenade" {
 	"Drug_Lord_anims\throwgrenade"
-	ACT_RANGE_ATTACK2 1
-	{ event 7 46 }
+	ACT_SPECIAL_ATTACK2 1
+	{ event 1100 46 "nade" }
 	fps 30
 }
 $sequence "frontkick" {
@@ -262,7 +224,7 @@ $sequence "drop_grenade" {
 }
 $sequence "reload_mp5" {
 	"Drug_Lord_anims\reload_mp5"
-	ACT_RELOAD 1
+	ACT_RELOAD_SMG1 1
 	{ event 2 0 }
 	fps 40
 }
@@ -422,7 +384,6 @@ $sequence "diveaside" {
 	{ event 5 26 }
 	{ event 6 28 }
 	fps 30
-	AX AY AZR
 }
 $sequence "bustwindow" {
 	"Drug_Lord_anims\bustwindow"
@@ -710,7 +671,6 @@ $sequence "patrol_rooftop" {
 }
 $sequence "patrol_street" {
 	"Drug_Lord_anims\patrol_street"
-	ACT_WALK 1
 	fps 30
 	loop
 	LX
@@ -1132,7 +1092,7 @@ $sequence "shoot_NPC_head01" {
 	"Drug_Lord_anims\shoot_NPC_head01"
 	fps 30
 }
-$sequence "sitting01" {
+$sequence "sitting01_2" {
 	"Drug_Lord_anims\sitting01_2"
 	fps 30
 }
@@ -1449,11 +1409,11 @@ $sequence "pilotingturb" {
 	"Drug_Lord_anims\pilotingturb"
 	fps 30
 }
-$sequence "death_gate_A" {
+$sequence "death_gate_A_2" {
 	"Drug_Lord_anims\death_gate_A_2"
 	fps 30
 }
-$sequence "death_gate_B" {
+$sequence "death_gate_B_2" {
 	"Drug_Lord_anims\death_gate_B_2"
 	fps 30
 }
@@ -2185,11 +2145,11 @@ $sequence "Point" {
 	"Drug_Lord_anims\Point"
 	fps 30
 }
-$sequence "Corner_peakL" {
+$sequence "Corner_peakL_2" {
 	"Drug_Lord_anims\Corner_peakL_2"
 	fps 30
 }
-$sequence "Corner_peakR" {
+$sequence "Corner_peakR_2" {
 	"Drug_Lord_anims\Corner_peakR_2"
 	fps 30
 }
@@ -2207,34 +2167,58 @@ $sequence "Moses_Powerup" {
 }
 $sequence "Moses_M60_walk" {
 	"Drug_Lord_anims\Moses_M60_walk"
+	ACT_WALK 1
+	{ event 1100 7 "step" }
+	{ event 1100 24 "step" }
+	loop
+	LX
 	fps 30
 }
 $sequence "Moses_M60_strafeR" {
 	"Drug_Lord_anims\Moses_M60_strafeR"
+	ACT_STRAFE_RIGHT 1
+	{ event 1100 11 "step" }
+	{ event 1100 21 "step" }
+	loop
+	LX LY
 	fps 30
 }
 $sequence "Moses_M60_strafeL" {
 	"Drug_Lord_anims\Moses_M60_strafeL"
+	ACT_STRAFE_LEFT 1
+	{ event 1100 11 "step" }
+	{ event 1100 21 "step" }
+	loop
+	LX LY
 	fps 30
 }
 $sequence "Moses_M60_run" {
 	"Drug_Lord_anims\Moses_M60_run"
+	ACT_RUN 1
+	{ event 1100 2 "step" }
+	{ event 1100 10 "step" }
+	loop
+	LX
 	fps 30
 }
 $sequence "Moses_M60_rightlegsmflinch" {
 	"Drug_Lord_anims\Moses_M60_rightlegsmflinch"
+	ACT_FLINCH_RIGHTLEG 1
 	fps 30
 }
 $sequence "Moses_M60_leftlegsmflinch" {
 	"Drug_Lord_anims\Moses_M60_leftlegsmflinch"
+	ACT_FLINCH_LEFTLEG 1
 	fps 30
 }
 $sequence "Moses_M60_flinchsml" {
 	"Drug_Lord_anims\Moses_M60_flinchsml"
+	ACT_SMALL_FLINCH 1
 	fps 30
 }
 $sequence "Moses_M60_flinchbig" {
 	"Drug_Lord_anims\Moses_M60_flinchbig"
+	ACT_BIG_FLINCH 5
 	fps 30
 }
 $sequence "Moses_M60_fire_up" {
@@ -2253,20 +2237,24 @@ $sequence "Moses_M60_die" {
 	"Drug_Lord_anims\Moses_M60_die"
 	fps 30
 }
-$sequence "Wave_gun" {
+$sequence "Wave_gun_2" {
 	"Drug_Lord_anims\Wave_gun_2"
 	fps 30
 }
 $sequence "Moses_M60_rightarmflinch" {
 	"Drug_Lord_anims\Moses_M60_rightarmflinch"
+	ACT_FLINCH_RIGHTARM 1
 	fps 30
 }
 $sequence "Moses_M60_leftarmflinch" {
 	"Drug_Lord_anims\Moses_M60_leftarmflinch"
+	ACT_FLINCH_LEFTARM 1
 	fps 30
 }
 $sequence "Moses_M60_melee" {
 	"Drug_Lord_anims\Moses_M60_melee"
+	ACT_MELEE_ATTACK1 1
+	{ event 1100 18 "melee" }
 	fps 30
 }
 $sequence "death-downed" {
@@ -2320,4 +2308,72 @@ $sequence "recoil-heli-CT3" {
 $sequence "recoil-heli-CT3-idle" {
 	"Drug_Lord_anims\recoil-heli-CT3-idle"
 	fps 30
+}
+
+$sequence "ragdoll" "hphy" fps 15 ACT_DIERAGDOLL 1 
+
+$collisionjoints hphy {
+
+	$mass 100.0
+	$inertia 5.00
+	$damping 0.005
+	$rotdamping 0.75
+	$rootbone "bip01"
+
+	$jointconstrain "bip01 spine1" x limit -60.00 60.00 0.00
+	$jointconstrain "bip01 spine1" y limit -25.00 25.00 0.20
+	$jointconstrain "bip01 spine1" z limit -25.00 30.00 0.20
+
+	$jointconstrain "bip01 r upperarm" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r upperarm" y limit -84.00 66.00 0.00
+	$jointconstrain "bip01 r upperarm" z limit -73.00 12.00 0.00
+
+	$jointconstrain "bip01 l upperarm" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l upperarm" y limit -66.00 84.00 0.00
+	$jointconstrain "bip01 l upperarm" z limit -73.00 12.00 0.20
+
+	$jointconstrain "bip01 l forearm" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l forearm" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l forearm" z limit -120.00 4.00 0.20
+
+	$jointconstrain "bip01 l hand" x limit -60.00 60.00 0.20
+	$jointconstrain "bip01 l hand" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l hand" z limit -57.00 70.00 0.20
+
+	$jointconstrain "bip01 r forearm" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r forearm" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r forearm" z limit -120.00 4.00 0.20
+
+	$jointconstrain "bip01 r hand" x limit -60.00 60.00 0.20
+	$jointconstrain "bip01 r hand" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r hand" z limit -57.00 70.00 0.00
+
+	$jointconstrain "bip01 r thigh" x limit -25.00 20.00 0.20
+	$jointconstrain "bip01 r thigh" y limit -40.00 20.00 0.00
+	$jointconstrain "bip01 r thigh" z limit -37.00 82.00 0.00
+
+	$jointconstrain "bip01 r calf" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r calf" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r calf" z limit -95.00 4.00 0.00
+
+	$jointrotdamping "bip01 head" 5.00
+	$jointconstrain "bip01 head" x limit -20.00 20.00 0.20
+	$jointconstrain "bip01 head" y limit -25.00 25.00 0.20
+	$jointconstrain "bip01 head" z limit -13.00 30.00 0.00
+
+	$jointconstrain "bip01 l thigh" x limit -25.00 20.00 0.20
+	$jointconstrain "bip01 l thigh" y limit -20.00 40.00 0.20
+	$jointconstrain "bip01 l thigh" z limit -37.00 82.00 0.00
+
+	$jointconstrain "bip01 l calf" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l calf" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l calf" z limit -95.00 4.00 0.20
+
+	$jointconstrain "bip01 l foot" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l foot" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 l foot" z limit -15.00 35.00 0.20
+
+	$jointconstrain "bip01 r foot" x limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r foot" y limit 0.00 0.00 0.00
+	$jointconstrain "bip01 r foot" z limit -15.00 35.00 0.20
 }
