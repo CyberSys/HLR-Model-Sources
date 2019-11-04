@@ -37,7 +37,7 @@ $sequence "toss_3" "toss_3" fps 10 loop
 
 $CollisionModel "phy.smd"
 {
-	$mass 5
+	$mass 2
 	$inertia 1
 	$damping 0
 	$rotdamping 0

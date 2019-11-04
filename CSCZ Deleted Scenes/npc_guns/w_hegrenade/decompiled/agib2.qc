@@ -31,5 +31,4 @@ $CollisionModel "w_hegrenade_w_flashbang.smd"
 	$damping 0
 	$rotdamping 0
 	$concave
-
 }
