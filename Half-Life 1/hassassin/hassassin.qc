@@ -234,7 +234,7 @@ $sequence "kickshort" {
 
 $sequence "jump" {
 	"hassassin_anims\jump.smd"
-	activity "ACT_HOP" 1
+	activity "ACT_JUMP" 1
 	{ event 1100 6 "hop" }
 	fadein 0.2
 	fadeout 0.2
@@ -243,7 +243,7 @@ $sequence "jump" {
 
 $sequence "fly_up" {
 	"hassassin_anims\fly_up.smd"
-	activity "ACT_ASSASSIN_FLY_UP" 1
+	activity "ACT_GLIDE" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 25
