@@ -23,9 +23,11 @@ $eyeposition 0 0 64
 
 $cdmaterials "models\hl_resurgence\hl1\hassassin\"
 
-$attachment "0" "Bip01 R Hand" 15 -5 -1 rotate 0 0 0
-$attachment "guntip" "Bip01 R Hand" 15 -5 -1 rotate 0 0 0
+$attachment "0" "Bip01 R Hand" 2.50 0.00 0.00 rotate 0 -0 -0
+$attachment "guntip" "Bip01 R Hand" 12.00 -3.00 0.00 rotate 0 -5 -0
 $attachment "grenadehand" "Bip01 L Hand" 0 0 0 rotate 0 0 0
+$attachment "eye_left" "Bip01 Head" 4.30 6.00 -1.00 rotate 0 85 -0
+$attachment "eye_right" "Bip01 Head" 4.30 6.00 0.20 rotate 0 85 -0
 
 $hbox 3 "Bip01 Pelvis" -2.400000 -4.550000 -3.710000 3.690000 3.950000 5.220000
 $hbox 6 "Bip01 L Leg" -1.060000 -4.250000 -2.830000 18.330000 4.320000 3.120000
@@ -275,6 +277,9 @@ $sequence "landfromjump" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 0 "step" }
+	{ event 1100 1 "land" }
+	{ event 1100 3 "step" }
 }
 
 $sequence "ragdoll" {
