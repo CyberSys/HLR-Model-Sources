@@ -21,6 +21,7 @@ $bbox 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
 $cbox 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
 $eyeposition 0.000000 0.000000 0.000000
 
+$origin 0 0 210
 
 //reference mesh(es)
 $body "studio" "pit_worm_up_reference"
@@ -65,21 +66,21 @@ $hbox 0 "Bone56" -16.930000 -31.490000 -95.169998 4.770000 4.220000 0.000000
 
 // 14 animation sequence(s)
 $sequence "idle" "idle" fps 35 loop ACT_IDLE 1 
-$sequence "idle2" "idle2" fps 35 loop ACT_GUARD 1 
-$sequence "attack" "attack" fps 35 ACT_WALK 1 { event 1100 24 "melee" } 
-$sequence "scream" "scream" fps 30 ACT_RUN 1 { event 1100 1 "scream" }
-$sequence "attacklow" "attacklow" fps 35 ACT_FLY 1 { event 1100 24 "melee" }  
-$sequence "doorclaw1" "doorclaw1" fps 30 ACT_SWIM 1 { event 1 17 } { event 1 41 } 
-$sequence "doorclaw2" "doorclaw2" fps 30 ACT_HOP 1 { event 1 18 } { event 1 38 } 
-$sequence "doorclaw3" "doorclaw3" fps 30 ACT_LEAP 1 { event 1 20 } 
+$sequence "idle2" "idle2" fps 35 loop ACT_IDLE 1 
+$sequence "attack" "attack" fps 35 ACT_MELEE_ATTACK1 1 { event 1100 24 "melee" } 
+$sequence "scream" "scream" fps 30 ACT_ARM 1 { event 1100 1 "scream" }
+$sequence "attacklow" "attacklow" fps 35 ACT_MELEE_ATTACK2 1 { event 1100 24 "melee" }  
+$sequence "doorclaw1" "doorclaw1" fps 30 ACT_DOORCLAW1 1 { event 1 17 } { event 1 41 } 
+$sequence "doorclaw2" "doorclaw2" fps 30 ACT_DOORCLAW2 1 { event 1 18 } { event 1 38 } 
+$sequence "doorclaw3" "doorclaw3" fps 30 ACT_DOORCLAW3 1 { event 1 20 } 
 $sequence "eyeblast" "eyeblast" fps 30 ACT_RANGE_ATTACK1 1 {
   { event 1100 25 "beam" } 
-  { event 1100 32 "beam end?" } 
+  { event 1100 35 "beam_end" } 
  }
-$sequence "platclaw1" "platclaw1" fps 30 ACT_LAND 1 { event 1 19 } 
-$sequence "platclaw2" "platclaw2" fps 30 ACT_STRAFE_LEFT 1 { event 1 22 } 
-$sequence "flinch1" "flinch1" fps 30 ACT_SMALL_FLINCH 1 
-$sequence "flinch2" "flinch2" fps 30 ACT_BIG_FLINCH 1  
+$sequence "platclaw1" "platclaw1" fps 30 ACT_SPECIAL_ATTACK1 1 { event 1100 19 "melee" } 
+$sequence "platclaw2" "platclaw2" fps 30 ACT_SPECIAL_ATTACK2 1 { event 1100 22 "melee" } 
+$sequence "flinch1" "flinch1" fps 30 ACT_SMALL_FLINCH 1 { event 1100 2 "beam_end" } 
+$sequence "flinch2" "flinch2" fps 30 ACT_BIG_FLINCH 1 { event 1100 2 "beam_end" } 
 $sequence "death" "death" fps 30 ACT_DIESIMPLE 1 
 
 // End of QC script.
