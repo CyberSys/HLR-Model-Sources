@@ -1,0 +1,41 @@
+// Created by Crowbar 0.63
+version 1
+nodes
+  0 "Combine_Strider.Body_Bone" -1
+  1 "Combine_Strider.Shoulder_Bone_Right" 0
+  2 "Combine_Strider.Leg_Right_Bone" 0
+  3 "Combine_Strider.Leg_Right_Bone1" 2
+  4 "Combine_Strider.Foot_Right" 3
+  5 "Combine_Strider.Shoulder_Bone_Hind" 0
+  6 "Combine_Strider.Leg_Hind_Bone" 0
+  7 "Combine_Strider.Leg_Hind_Bone1" 6
+  8 "Combine_Strider.Foot_Hind" 7
+  9 "Combine_Strider.Shoulder_Bone_Left" 0
+  10 "Combine_Strider.Leg_Left_Bone" 0
+  11 "Combine_Strider.Leg_Left_Bone1" 10
+  12 "Combine_Strider.Foot_Left" 11
+  13 "Combine_Strider.Neck_Bone" 0
+  14 "Combine_Strider.Head_Bone" 13
+  15 "Combine_Strider.Gun_Bone1" 0
+  16 "Combine_Strider.Gun_Bone2" 15
+end
+skeleton
+  time 0
+    0 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+    1 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    2 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    3 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    4 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    5 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    6 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    7 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    8 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    9 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    10 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    11 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    12 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    13 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    14 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    15 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+    16 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+end

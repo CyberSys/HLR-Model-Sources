@@ -1,12 +1,11 @@
 // Created by Crowbar 0.58
 
-$modelname "stalker.mdl"
+$modelname "vj_hlr/hl2b/stalker.mdl"
 
 $bodygroup "studio"
 {
 	studio "stalker_reference.smd"
 }
-
 
 $surfaceprop "flesh"
 
@@ -16,7 +15,7 @@ $illumposition 0.888 -3.547 33.941
 
 $eyeposition 0 0 73
 
-$cdmaterials "models\stalker\"
+$cdmaterials "models\hl_resurgence\hl2b\stalker\"
 
 $attachment "0" "laser" 0 0 0 rotate 0 0 0
 
@@ -66,8 +65,8 @@ $sequence "idle2" {
 $sequence "walk" {
 	"stalker_anims\walk.smd"
 	activity "ACT_WALK" 1
-	{ event 2051 5 "" }
-	{ event 2050 24 "" }
+	{ event 1100 5 "step" }
+	{ event 1100 24 "step" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -78,8 +77,8 @@ $sequence "walk" {
 $sequence "run" {
 	"stalker_anims\run.smd"
 	activity "ACT_RUN" 1
-	{ event 2051 4 "" }
-	{ event 2050 15 "" }
+	{ event 1100 4 "step" }
+	{ event 1100 15 "step" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -90,7 +89,7 @@ $sequence "run" {
 $sequence "attack1" {
 	"stalker_anims\attack1.smd"
 	activity "ACT_MELEE_ATTACK1" 1
-	{ event 1 22 "" }
+	{ event 1100 22 "melee" }
 	fadein 0.2
 	fadeout 0.2
 	fps 35
@@ -100,7 +99,7 @@ $sequence "attack1" {
 $sequence "attack2" {
 	"stalker_anims\attack2.smd"
 	activity "ACT_MELEE_ATTACK1" 1
-	{ event 1 22 "" }
+	{ event 1100 22 "melee" }
 	fadein 0.2
 	fadeout 0.2
 	fps 40
@@ -110,7 +109,7 @@ $sequence "attack2" {
 $sequence "attack3" {
 	"stalker_anims\attack3.smd"
 	activity "ACT_MELEE_ATTACK1" 1
-	{ event 1 19 "" }
+	{ event 1100 19 "melee" }
 	fadein 0.2
 	fadeout 0.2
 	fps 35
@@ -120,7 +119,6 @@ $sequence "attack3" {
 $sequence "rangeattack" {
 	"stalker_anims\rangeattack.smd"
 	activity "ACT_RANGE_ATTACK1" 1
-	{ event 1 1 "" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -146,6 +144,7 @@ $sequence "turninspect" {
 
 $sequence "jumpback" {
 	"stalker_anims\jumpback.smd"
+	activity "ACT_JUMPBACK" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -153,8 +152,8 @@ $sequence "jumpback" {
 
 $sequence "windowscare" {
 	"stalker_anims\windowscare.smd"
-	{ event 1003 46 "Stalker_bang" }
-	{ event 1003 77 "Stalker_door_close" }
+	{ event 1100 46 "Stalker_bang" }
+	{ event 1100 77 "Stalker_door_close" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -170,19 +169,17 @@ $sequence "ragdoll" {
 
 $collisionmodel "stalker_physics.smd"
 {
-	$mass 90
+	$mass 92
 	$inertia 5
 	$damping 0.01
 	$rotdamping 1.5
 	$rootbone "Bip01 Spine"
 
 
-	$jointmassbias "Bip01 R Thigh" 2
 	$jointconstrain "Bip01 R Thigh" x limit 0 0 0
 	$jointconstrain "Bip01 R Thigh" y limit -40 20 1
 	$jointconstrain "Bip01 R Thigh" z limit -37 63 1
 
-	$jointmassbias "Bip01 L Thigh" 2
 	$jointconstrain "Bip01 L Thigh" x limit 0 0 0
 	$jointconstrain "Bip01 L Thigh" y limit -20 40 1
 	$jointconstrain "Bip01 L Thigh" z limit -360 360 1
@@ -195,27 +192,22 @@ $collisionmodel "stalker_physics.smd"
 	$jointconstrain "Bip01 Spine2" y limit -25 25 1
 	$jointconstrain "Bip01 Spine2" z limit -25 15 1
 
-	$jointmassbias "Bip01 R UpperArm" 2
 	$jointconstrain "Bip01 R UpperArm" x limit 0 0 0
 	$jointconstrain "Bip01 R UpperArm" y limit -45 76 1
 	$jointconstrain "Bip01 R UpperArm" z limit -75 75 1
 
-	$jointmassbias "Bip01 L UpperArm" 2
 	$jointconstrain "Bip01 L UpperArm" x limit 0 0 0
 	$jointconstrain "Bip01 L UpperArm" y limit -76 30 1
 	$jointconstrain "Bip01 L UpperArm" z limit -75 75 1
 
-	$jointmassbias "Bip01 L Forearm" 3
 	$jointconstrain "Bip01 L Forearm" x limit 0 0 0
 	$jointconstrain "Bip01 L Forearm" y limit 0 0 0
 	$jointconstrain "Bip01 L Forearm" z limit -120 4 1
 
-	$jointmassbias "Bip01 R Forearm" 3
 	$jointconstrain "Bip01 R Forearm" x limit 0 0 0
 	$jointconstrain "Bip01 R Forearm" y limit 0 0 0
 	$jointconstrain "Bip01 R Forearm" z limit -120 4 1
 
-	$jointrotdamping "Bip01 Head" 5
 	$jointconstrain "Bip01 Head" x limit -20 20 1
 	$jointconstrain "Bip01 Head" y limit -25 25 1
 	$jointconstrain "Bip01 Head" z limit -13 30 1
