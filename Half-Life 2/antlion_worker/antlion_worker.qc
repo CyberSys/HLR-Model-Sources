@@ -214,66 +214,7 @@ $definebone "Antlion.WingR_Bone" "Antlion.Body_Bone" -5.827132 4.411094 0.063164
 $definebone "Antlion.bone" "Antlion.Back_Bone" 13.389685 0.268266 6.023556 -77.287764 -28.003829 -26.504174 0 0 0 0 0 0
 $definebone "Antlion" "" 0 0 0 0 0 89.999983 0 0 0 0 0 0
 
-$jigglebone "Antlion.AntR_bone"
-{
-	is_flexible
-	{
-		length 5
-		tip_mass 10
-		pitch_stiffness 700
-		pitch_damping 8
-		yaw_stiffness 700
-		yaw_damping 8
-		along_stiffness 100
-		along_damping 0
-		angle_constraint 20
-	}
-}
-$jigglebone "Antlion.AntL_bone"
-{
-	is_flexible
-	{
-		length 5
-		tip_mass 15
-		pitch_stiffness 700
-		pitch_damping 8
-		yaw_stiffness 700
-		yaw_damping 7
-		along_stiffness 100
-		along_damping 0
-		angle_constraint 20
-	}
-}
-$jigglebone "Antlion.glasswingR_bone"
-{
-	is_flexible
-	{
-		length 30
-		tip_mass 5
-		pitch_stiffness 700
-		pitch_damping 8
-		yaw_stiffness 700
-		yaw_damping 6
-		along_stiffness 100
-		along_damping 0
-		angle_constraint 36.999999
-	}
-}
-$jigglebone "Antlion.glasswingL_bone"
-{
-	is_flexible
-	{
-		length 30
-		tip_mass 5
-		pitch_stiffness 700
-		pitch_damping 8
-		yaw_stiffness 700
-		yaw_damping 5
-		along_stiffness 100
-		along_damping 0
-		angle_constraint 39.999999
-	}
-}
+
 
 // The 32 below is a guess until further is known about the format.
 

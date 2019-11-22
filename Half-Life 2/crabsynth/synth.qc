@@ -49,6 +49,9 @@ $texturegroup "skinfamilies"
 	}
 }
 
+$attachment "muzzle" "Bone11" 8.00 -66.00 -15.00 rotate 0 -90 0
+$attachment "rpg" "Bone11" 24.30 -58.00 -19.00 rotate 0 -90 0
+
 $cbox 0 0 0 0 0 0
 
 $bbox -127.172 -97.617 -21.177 168.468 92.605 150.124
@@ -67,9 +70,6 @@ $hbox 0 "Bip02 R Calf"	   -14.39  -17.45  -11.79    36.85   18.16   19.00
 $hbox 0 "Bip02 R HorseLink"	    -2.25  -18.53   -8.44    51.82   29.30   29.78
 $hbox 0 "Bip02 R Foot"	    -4.97   -6.65   -7.20    16.25   48.75   20.86
 $hbox 0 "Bip02 Tail"	   -41.90  -43.94  -39.09    81.63   35.87   47.02
-$hbox 0 "Box11"	   -17.29  -12.59   -8.69   101.44   26.13   22.89
-$hbox 0 "Box09"	    -5.45    0.00   -3.77    13.02   28.79   13.83
-$hbox 0 "Dummy10"	     0.00  -12.94  -16.59    95.39    0.00    6.16
 $hbox 0 "Box07"	   -80.64   -3.40  -11.36     1.09    2.30    2.99
 $hbox 0 "Box06"	   -53.26   -3.96  -19.89    11.80    7.93    1.14
 $hbox 0 "Box08"	   -27.78   -2.13    0.00     4.98    3.28    4.30
@@ -104,7 +104,7 @@ $hbox 0 "Box02"	   -31.20   -6.44  -33.12    22.30   28.47    6.69
 $hbox 0 "Box03"	    -4.06   -3.24   -1.01     1.39    3.87    6.10
 $hbox 0 "Box10"	   -24.81  -10.49   -0.03    11.45    7.97   22.33
 $hbox 0 "Box01"	   -69.01   -3.70  -11.57     0.00   14.75    2.66
-$hbox 1 "Box11"	    -2.00   -4.50   -2.50    30.00   20.50   22.50
+$hbox 15 "Box11"	   -16.00   -7.00   -6.00    44.00   23.00   26.00
 
 $definebone "Bip02" "" 0.130685 -38.762123 50.807545 81.907506 90.000078 180.000007 0 0 0 0 0 0
 $definebone "Bip02 Pelvis" "Bip02" -0.000001 0 0 -89.980216 -89.999928 0 0 0 0 0 0 0
@@ -326,7 +326,7 @@ $sequence "walk_armed" {
 	activity "ACT_RUN" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 40
+	fps 45
 	loop
 	walkframe 59 LX LY
 	{ event 1100 28 "step_heavy" }
@@ -336,26 +336,38 @@ $sequence "walk_armed" {
 }
 
 $sequence "walk" {
-	"walk_S"
-	"walk_SE"
-	"walk_E"
-	"walk_NE"
+	//"walk_S"
+	//"walk_SE"
+	//"walk_E"
+	//"walk_NE"
 	"walk_N"
-	"walk_NW"
-	"walk_W"
-	"walk_SW"
-	"walk_S"
+	//"walk_NW"
+	//"walk_W"
+	//"walk_SW"
+	//"walk_S"
 	activity "ACT_WALK" 1
-	blend "move_yaw" -180 180
-	blendwidth 9
+	//blend "move_yaw" -180 180
+	//blendwidth 9
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 	loop
-	{ event 1100 20 "step_heavy" }
-	{ event 1100 44 "step_heavy" }
-	{ event 1100 26 "step" }
+	{ event 1100 28 "step_heavy" }
+	{ event 1100 59 "step_heavy" }
 	{ event 1100 29 "step" }
+	{ event 1100 56 "step" }
+	//{ event 1100 20 "step_heavy" }
+	//{ event 1100 44 "step_heavy" }
+	//{ event 1100 26 "step" }
+	//{ event 1100 29 "step" }
+}
+
+$sequence "wow.gordon.freeman.and.about.time.too" {
+	"synth_anims\chargeend.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
 }
 
 $sequence "chargeready" {
