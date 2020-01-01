@@ -92,7 +92,7 @@ $hbox 6 "Bone18" -1.770000 -3.600000 -32.619999 0.000000 0.000000 0.000000
 
 // 16 animation sequence(s)
 $sequence "idle1" "idle1" fps 40 loop ACT_IDLE 2 
-$sequence "idle2" "idle2" fps 40 ACT_IDLE 2 
+$sequence "idle2" "idle2" fps 40 loop ACT_IDLE 2 
 $sequence "walk" "walk" LX fps 25 loop ACT_WALK 1 {
   { event 1100 22 "step" } 
   { event 1100 24 "step" } 
