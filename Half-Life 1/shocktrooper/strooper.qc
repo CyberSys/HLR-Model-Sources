@@ -313,14 +313,22 @@ $Sequence "standing_mp5" {
 	{ event 1100 3 "rangeattack" }
 }
 
-$Sequence "reload_mp5" {
-	"reload_mp5.smd"
+$Sequence "reload" {
+	"reload.smd"
 	activity "ACT_RELOAD" 1
 	fadein 0.2
 	fadeout 0.2
+	fps 25
+	{ event 1100 7 "reload" }
+}
+
+$Sequence "reload_crouch" {
+	"reload_crouch.smd"
+	activity "ACT_RELOAD_LOW" 1
+	fadein 0.2
+	fadeout 0.2
 	fps 30
-	walkframe 300 LX
-	{ event 1100 60 "reload" }
+	{ event 1100 32 "reload" }
 }
 
 $sequence "advance_signal" "advance_signal" fps 30 ACT_SIGNAL1 1

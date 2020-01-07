@@ -13,7 +13,7 @@ Original internal name:
 */
 
 $modelname vj_hlr/hl1/protozoa.mdl
-$surfaceprop "alienflesh"
+$surfaceprop "no_decal"
 $Contents "solid"
 $cdmaterials "models\hl_resurgence\hl1\"
 
@@ -24,17 +24,17 @@ $eyeposition 0.000000 0.000000 0.000000
 
 
 //reference mesh(es)
-$body "studio" "protozoa_ref"
+$body "studio" "protozoa_ref_center"
 
 
 // 5 hit box(es)
-$hbox 0 "Bone04" 0.000000 -56.000000 0.000000 68.000000 0.000000 28.000000
 $hbox 0 "Bone02" 0.000000 -4.000000 -1.083763 24.000000 0.000000 0.000000
 $hbox 0 "Bone03" -2.623581 0.000000 -1.083763 0.000000 2.000004 0.000000
 $hbox 0 "Sphere02" -14.690000 -15.180000 -11.910000 15.640000 15.180000 16.670000
 $hbox 0 "Sphere01" -45.759998 -34.639999 -30.200001 48.700001 34.639999 42.270000
 
 // 1 animation sequence(s)
-$sequence "orbit" "orbit" fps 8 ACT_IDLE 1 loop 
+$sequence "idle" "orbit_center" fps 8 ACT_IDLE 1 loop 
+$sequence "orbit" "orbit" fps 8 ACT_IDLE_ANGRY 1 loop 
 
 // End of QC script.

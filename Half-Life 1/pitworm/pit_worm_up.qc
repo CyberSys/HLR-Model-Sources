@@ -26,6 +26,10 @@ $origin 0 0 210
 //reference mesh(es)
 $body "studio" "pit_worm_up_reference"
 
+$CollisionModel "pit_worm_up_reference.smd" {
+	$automass
+}
+
 
 // 6 skin families
 $texturegroup skinfamilies 
