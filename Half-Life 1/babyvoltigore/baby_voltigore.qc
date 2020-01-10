@@ -31,7 +31,7 @@ $body "body" "voltigore_baby_ref"
 $attachment 0 "Bone41" 0.000000 0.000000 0.000000
 $attachment 1 "Bone65" 0.000000 0.000000 0.000000
 $attachment 2 "Bone58" 0.000000 0.000000 0.000000
-$attachment 3 "Dummy01" 90.000000 0.000000 -9.000000
+$attachment 3 "Dummy01" 30.000000 0.000000 -3.000000
 
 // 4 bone controller(s)
 $controller 0 "Bone39" ZR -25.000000 25.000000
