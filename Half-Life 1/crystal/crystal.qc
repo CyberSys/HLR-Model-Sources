@@ -1,26 +1,23 @@
 // Created by Crowbar 0.63
 
-// Stored modelname (without quotes): "valve/models/crystal.mdl"
-$modelname "crystal.mdl"
-$cd "."
-$cdtexture "."
-$cliptotextures
-$scale 1.0
+$modelname "vj_hlr/hl1/crystal.mdl"
+$CDMaterials "models\hl_resurgence\hl1\"
 
 $bodygroup "body"
 {
 	studio "crystal_reference"
 }
 
-$flags 0
-
 $texturegroup "skinfamilies"
 {
 	{
-		"side.bmp"
+		"side"
 	}
 }
 
+$Contents "solid"
+
+$SurfaceProp "glass"
 
 $cbox 0 0 0 0 0 0
 
@@ -28,7 +25,14 @@ $bbox 0 0 0 0 0 0
 
 $hbox 0 "crystal" -22.82 -15.99 -38.830002 26.870001 19.32 55.169998
 
+$sequence "idle" {
+	"crystal_reference"
+	activity ACT_IDLE 1
+	fps 1
+}
+
 $sequence "spin" {
 	"crystal_anims\spin"
+	activity ACT_IDLE_ANGRY 1
 	fps 7
 }
