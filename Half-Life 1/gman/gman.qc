@@ -196,13 +196,13 @@ $sequence "gman_neckturn" {
 
 $sequence "idle01" {
 	"gman_anims\idle01"
-	ACT_IDLE 40
+	ACT_IDLE 50
 	fps 13
 	loop
 }
 $sequence "idlebrush" {
 	"gman_anims\idlebrush"
-	ACT_IDLE 4
+	ACT_IDLE 1
 	fps 18
 	loop
 }
@@ -214,7 +214,7 @@ $sequence "idlelook" {
 }
 $sequence "idle02" {
 	"gman_anims\idle02"
-	ACT_IDLE 35
+	ACT_IDLE 10
 	fps 14
 	loop
 }
@@ -222,10 +222,11 @@ $sequence "open" {
 	"gman_anims\open"
 	ACT_IDLE 1
 	fps 22
+	loop
 }
 $sequence "stand" {
 	"gman_anims\stand"
-	ACT_IDLE 14
+	ACT_IDLE 10
 	fps 20
 	loop
 }
@@ -268,7 +269,7 @@ $sequence "bigyes" {
 }
 $sequence "listen" {
 	"gman_anims\listen"
-	ACT_IDLE 1
+	ACT_IDLE 10
 	fps 14
 }
 $sequence "lookdown" {
@@ -282,4 +283,13 @@ $sequence "lookdown2" {
 	ACT_LOOKDOWN2 1
 	fps 14
 	loop
+}
+
+$CollisionModel "gman_reference.smd"
+{
+	$mass 90
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$concave
 }
