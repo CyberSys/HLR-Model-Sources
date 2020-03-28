@@ -27,7 +27,7 @@ $body "studio" "Nihilanth(reference)"
 
 
 // 4 attachment(s)
-$attachment 0 "Bip01 Head" 360.000000 -285.000000 0.000000
+$attachment "0" "Bip01 Head" 355.00 -277.50 -12.00 rotate 0 -40 0
 $attachment 1 "Bip01 Head" 32.000000 56.000000 0.000000
 $attachment 2 "Bip01 L Hand" 64.000000 0.000000 0.000000
 $attachment 3 "Bip01 R Hand" 64.000000 0.000000 0.000000

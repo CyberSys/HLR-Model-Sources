@@ -36,3 +36,13 @@ $sequence "spin" {
 	activity ACT_IDLE_ANGRY 1
 	fps 7
 }
+
+$CollisionModel "crystal_reference.smd"
+{
+	$mass 30
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$concave
+
+}
