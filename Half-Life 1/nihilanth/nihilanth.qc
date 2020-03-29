@@ -100,8 +100,8 @@ $hbox 0 "Bone39" -15.070000 -37.660000 -7.030000 0.000000 0.000000 0.000000
 
 // 21 animation sequence(s)
 $sequence "float" "float" fps 8 loop ACT_IDLE 4 
-$sequence "attack1" "attack1" fps 8 loop ACT_RANGE_ATTACK1 1 { event 1100 35 "orb-o-death" } 
-$sequence "attack2" "attack2" fps 8 loop ACT_RANGE_ATTACK2 1 { event 1100 39 "wtf" } 
+$sequence "attack1" "attack1" fps 8 loop ACT_RANGE_ATTACK1 1 { event 1100 35 "elec_orbs" } 
+$sequence "attack2" "attack2" fps 8 loop ACT_RANGE_ATTACK2 1 { event 1100 39 "tele_orb" } 
 $sequence "throw" "throw" fps 20 
 $sequence "block" "block" fps 15 
 $sequence "recharge" "recharge" fps 8 ACT_RECHARGE 1 {
@@ -118,8 +118,8 @@ $sequence "recharge" "recharge" fps 8 ACT_RECHARGE 1 {
   { event 1100 39 "absorb_crystal_meth" } 
  }
 $sequence "float_open" "float_open" fps 8 loop ACT_IDLE_HURT 4 
-$sequence "attack1_open" "attack1_open" fps 8 loop ACT_RANGE_ATTACK1_HURT 1 { event 1100 35 "orb-o-death" } 
-$sequence "attack2_open" "attack2_open" fps 8 loop ACT_RANGE_ATTACK1_HURT 1 { event 1100 39 "wtf" } 
+$sequence "attack1_open" "attack1_open" fps 8 loop ACT_RANGE_ATTACK1_LOW 1 { event 1100 35 "elec_orbs_open" } 
+$sequence "attack2_open" "attack2_open" fps 8 loop ACT_RANGE_ATTACK2_LOW 1 { event 1100 39 "tele_orb" } 
 $sequence "flinch1" "flinch1" fps 20 loop ACT_SMALL_FLINCH 1 
 $sequence "flinch2" "flinch2" fps 20 loop ACT_BIG_FLINCH 1 
 $sequence "fall" "fall" fps 8 loop { event 1100 1 "unused" } 
@@ -138,6 +138,6 @@ $sequence "walk_r" "walk_r" fps 8 loop
 $sequence "walk_l" "walk_l" fps 8 loop 
 $sequence "walk" "walk" LX fps 15 loop ACT_WALK 1 
 $sequence "shoot" "shoot" fps 15 { event 1100 45 "shoot" } 
-$sequence "transition_to_hurt" "shoot" fps 15 { event 1100 45 "from healthy to hurt" } 
+$sequence "transition_to_hurt" "shoot" fps 15 { event 1100 45 "transition_to_hurt" } 
 
 // End of QC script.
